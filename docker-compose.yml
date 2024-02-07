@@ -1,0 +1,11 @@
+version: '3.1'
+
+services:
+  postgres:
+    container_name: yen_api_postgres
+    hostname: postgres
+    image: postgres:13.1
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: example

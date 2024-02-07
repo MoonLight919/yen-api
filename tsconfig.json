@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "strictPropertyInitialization": false,
+    "strictNullChecks": true,
+    "strict": false,
+    "esModuleInterop": true,
+    "target": "es2020",
+    "sourceMap": true,
+    "incremental": true,
+    "skipLibCheck": true,
+    "baseUrl": "./",
+    "outDir": "./dist",
+    "lib": ["es2019", "es2020"],
+    "paths": {
+      "@resources/*": ["src/resources/*"],
+      "@config/*": ["src/config/*"],
+      "@modules/*": ["src/modules/*"],
+      "@utils": ["src/utils"],
+      "@lib/*": ["src/lib/*"]
+    }
+  },
+  "include": ["src/**/*", "@types/**/*", "test/**/*"],
+  "exclude": ["node_modules"]
+}

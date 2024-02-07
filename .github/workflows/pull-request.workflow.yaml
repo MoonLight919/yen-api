@@ -1,0 +1,77 @@
+name: Pull Request
+
+on:
+  - pull_request
+
+concurrency:
+  group: pull-request-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: wagoid/commitlint-github-action@v5
+        with:
+          configFile: .commitlintrc.json
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18.17.1
+      - name: Install Yarn
+        run: npm i -g yarn
+      - name: Install modules
+        run: yarn --immutable
+      - name: Run ESLint Code
+        run: yarn eslint 'src/**/*.ts'
+      - name: Run ESLint Test Code
+        run: yarn eslint -c .eslintrc.spec.yaml 'test/**/*.ts'
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18.17.1
+      - name: Install Yarn
+        run: npm i -g yarn
+      - name: Install modules
+        run: yarn --immutable
+      - name: Run Prettier
+        run: yarn prettier '**/*.{js,ts,mjs,cjs,json,md}' --check
+  build:
+    needs:
+      - lint-commit
+      - lint
+      - format
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18.17.1
+      - name: Install Yarn
+        run: npm i -g yarn
+      - name: Install modules
+        run: yarn --immutable
+      - name: Run build
+        run: yarn build
+  migration:
+    needs:
+      - lint-commit
+      - lint
+      - format
+    uses: ./.github/workflows/database-migration.workflow.yaml
+    secrets: inherit
+  test:
+    needs:
+      - build
+      - migration
+    uses: ./.github/workflows/test.workflow.yaml
+    secrets: inherit

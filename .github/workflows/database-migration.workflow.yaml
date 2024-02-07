@@ -1,0 +1,44 @@
+name: Test
+
+on:
+  workflow_call:
+
+jobs:
+  database_migration:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:15.3-alpine
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: example
+          POSTGRES_DB: test_integration
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+      
+    steps:
+      - name: Checkout to main branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+     
+      - name: Migrate database (main)
+        uses: ariga/atlas-deploy-action@v0
+        with:
+          url: postgres://postgres:example@postgres:5432/test_integration?search_path=public&sslmode=disable
+          dir: db/migrations
+
+      - name: Checkout to pull request branch
+        uses: actions/checkout@v4
+
+      - name: Migrate database (pull request)
+        uses: ariga/atlas-deploy-action@v0
+        with:
+          url: postgres://postgres:example@postgres:5432/test_integration?search_path=public&sslmode=disable
+          dir: db/migrations

@@ -1,0 +1,14 @@
+*
+!@types
+!packages
+!src
+!package.json
+!yarn.lock
+!.yarnrc.yml
+!.pnp.cjs
+!.pnp.loader.mjs
+!.yarn/cache
+!.yarn/releases
+!.yarn/plugins
+!tsconfig.json
+!tsconfig.build.json
