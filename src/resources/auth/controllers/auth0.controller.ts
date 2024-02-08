@@ -6,5 +6,4 @@ import { Auth0KeyAuthenticationGuard } from '../guards';
 @ApiTags('Auth')
 @Controller('auth')
 @UseGuards(Auth0KeyAuthenticationGuard)
-export class Auth0Controller {
-}
+export class Auth0Controller {}

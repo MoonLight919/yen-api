@@ -8,9 +8,7 @@ import {
   type OmitDefaultResourceFields,
 } from '@lib/db';
 import { type ServiceOptions } from '@lib/interfaces';
-import {
-  UserPhoneNumberAlreadyExistsError,
-} from '../errors';
+import { UserPhoneNumberAlreadyExistsError } from '../errors';
 import { type UserRecord } from '../interfaces';
 import { UserRepository } from '../repositories';
 
@@ -37,11 +35,8 @@ export class UserService {
           intercept: options?.intercept,
           transaction: trx.knexTrx,
         });
-
       } catch (err) {
-        if (
-          err instanceof UserPhoneNumberAlreadyExistsError
-        ) {
+        if (err instanceof UserPhoneNumberAlreadyExistsError) {
           return err;
         }
         throw err;
@@ -100,15 +95,13 @@ export class UserService {
     idUser: ID,
     options?: ServiceOptions<UserRecord, UserRecord>,
   ): Promise<UserRecord | null> {
-    return this.transactionService.withTransaction(async (trx) => {
-      const deletedUser = await this.userRepository.delete(idUser, {
-        intercept: options?.intercept,
-      });
-      if (!deletedUser) {
-        return null;
-      }
+    const deletedUser = await this.userRepository.delete(idUser, {
+      intercept: options?.intercept,
+    });
+    if (!deletedUser) {
+      return null;
+    }
 
-      return deletedUser;
-    }, options);
+    return deletedUser;
   }
 }

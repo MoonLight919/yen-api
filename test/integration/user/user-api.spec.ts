@@ -2,9 +2,7 @@ import { describe, it, expect, beforeEach, beforeAll, afterAll } from 'vitest';
 import { type NestFastifyApplication } from '@nestjs/platform-fastify';
 import { type UserRecord } from '@resources/user/interfaces';
 import { UserModule } from '@resources/user/user.module';
-import {
-  insertRandomUserWithAuth0Sub,
-} from '../../core/seeds';
+import { insertRandomUserWithAuth0Sub } from '../../core/seeds';
 import {
   buildHttpRequest,
   type HttpRequest,

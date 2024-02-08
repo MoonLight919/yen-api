@@ -1,6 +1,6 @@
 import { Type } from '@sinclair/typebox';
-import { extendResourceObject, idSchema } from '@lib/db';
-import { nullable, ref } from '@lib/schemas';
+import { extendResourceObject } from '@lib/db';
+import { nullable } from '@lib/schemas';
 
 export const userDtoSchema = extendResourceObject(
   Type.Object({
