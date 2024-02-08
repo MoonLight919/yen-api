@@ -11,4 +11,3 @@ export const retrieveCurrentUserResponseDtoSchema = Type.Object(
 export type RetrieveCurrentUserResponseDto = Static<
   typeof retrieveCurrentUserResponseDtoSchema
 >;
-

@@ -17,10 +17,10 @@ import { MetadataContainer } from '@modules/core/metadata';
 import { type ApplicationFastifyRequest } from '@modules/core/interfaces';
 import { ConfigModule } from '@modules/config/config.module';
 import { JwtService } from '@resources/auth/services';
+import { AuthModule } from '@resources/auth/auth.module';
 import { TransactionModule } from '@modules/transaction';
 import { dbConfig, type DBConfig } from '@config/db.config';
 import { AjvResolverModule } from '@modules/ajv-resolver';
-import { AuthCoreModule } from '@resources/auth/auth-core.module';
 import { mockConfig, MockLoggerService, MockJwtService } from '../mocks';
 import { initSentry } from '../../../src/sentry';
 
@@ -51,7 +51,7 @@ export const buildApplication = async (
       CoreModule,
       AjvResolverModule,
       TransactionModule,
-      AuthCoreModule,
+      AuthModule,
       ...(metadata.imports || []),
     ],
   });

@@ -9,6 +9,7 @@ import { TransactionModule } from '@modules/transaction';
 import { dbConfig, type DBConfig } from '@config/db.config';
 import { type AppConfig, appConfig } from '@config/app.config';
 import { AjvResolverModule } from '@modules/ajv-resolver';
+import { IpGeolocationModule } from '@resources/ip-geolocation/ip-geolocation.module';
 import { AuthModule } from './auth/auth.module';
 import { UserModule } from './user/user.module';
 
@@ -35,6 +36,7 @@ import { UserModule } from './user/user.module';
     AjvResolverModule,
     AuthModule,
     UserModule,
+    IpGeolocationModule,
   ],
 })
 export class AppModule {}

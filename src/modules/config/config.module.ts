@@ -4,6 +4,7 @@ import { dbConfig } from '@config/db.config';
 import { appConfig } from '@config/app.config';
 import { auth0Config } from '@config/auth0.config';
 import { featuresConfig } from '@config/features.config';
+import { ipGeolocationConfig } from '@config/ip-geolocation.config';
 
 @Module({
   imports: [
@@ -15,6 +16,7 @@ import { featuresConfig } from '@config/features.config';
         auth0Config,
         dbConfig,
         featuresConfig,
+        ipGeolocationConfig,
       ],
     }),
   ],

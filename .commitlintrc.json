@@ -17,15 +17,8 @@
         "core",
         "auth",
         "auth0",
-        "image",
-        "game",
         "config",
-        "wallet",
-        "slack",
-        "logging",
-        "wallet-transaction",
-        "payout",
-        "game-wallet-transaction"
+        "ip-geolocation"
       ]
     ],
     "type-enum": [

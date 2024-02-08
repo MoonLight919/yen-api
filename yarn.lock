@@ -2091,6 +2091,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@nestjs/axios@npm:3.0.2":
+  version: 3.0.2
+  resolution: "@nestjs/axios@npm:3.0.2"
+  peerDependencies:
+    "@nestjs/common": ^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0
+    axios: ^1.3.1
+    rxjs: ^6.0.0 || ^7.0.0
+  checksum: 285a735fb5db602b63aa4a37e161f609b2cec05b69f4bffe983617c2136ac29c0a33bb96e6276d22a656907bed5d53460e740310bc05c043dcd39c37db7cda29
+  languageName: node
+  linkType: hard
+
 "@nestjs/cli@npm:10.2.1":
   version: 10.2.1
   resolution: "@nestjs/cli@npm:10.2.1"
@@ -3381,6 +3392,43 @@ __metadata:
     "@smithy/types": ^2.5.0
     tslib: ^2.5.0
   checksum: 1325887f9002b9f08c5cfcabcf35ce4488b4c2d009333955a166b27aa40b149a19f8359fdd8b265995409f64686bfb3aa02eb7bc18aea15aaa8d309d640107a5
+  languageName: node
+  linkType: hard
+
+"@swc-node/core@npm:^1.10.6":
+  version: 1.12.0
+  resolution: "@swc-node/core@npm:1.12.0"
+  peerDependencies:
+    "@swc/core": ">= 1.3"
+    "@swc/types": ">= 0.1"
+  checksum: a6c9061b1c982d04d3904dbec89ed925e2c0ac8151f2ec384645e25100f6acc9d0148b9f347887d298c63c965877a50f9c4810dc3112c58d706c48df75944e69
+  languageName: node
+  linkType: hard
+
+"@swc-node/register@npm:1.6.8":
+  version: 1.6.8
+  resolution: "@swc-node/register@npm:1.6.8"
+  dependencies:
+    "@swc-node/core": ^1.10.6
+    "@swc-node/sourcemap-support": ^0.3.0
+    colorette: ^2.0.19
+    debug: ^4.3.4
+    pirates: ^4.0.5
+    tslib: ^2.5.0
+  peerDependencies:
+    "@swc/core": ">= 1.3"
+    typescript: ">= 4.3"
+  checksum: 70bfbd1e9d969318f68e11b9db86ca4d99c52f5f8a8aa4e3c63b1d512d8b4909c034a5e1346b243c45483d13c47f57b0943f6a1cafbe6f884d14d1026e0396c7
+  languageName: node
+  linkType: hard
+
+"@swc-node/sourcemap-support@npm:^0.3.0":
+  version: 0.3.0
+  resolution: "@swc-node/sourcemap-support@npm:0.3.0"
+  dependencies:
+    source-map-support: ^0.5.21
+    tslib: ^2.5.0
+  checksum: a3c837ed790238ef88682eb342b75d756eba5eb3b6cfe6cf14a597bd78dfc9a9797f1e54a4977c1297e5324fba2e33bd76ab8aa9c396ad463693de2001180c9e
   languageName: node
   linkType: hard
 
@@ -5418,7 +5466,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"colorette@npm:^2.0.20, colorette@npm:^2.0.7":
+"colorette@npm:^2.0.19, colorette@npm:^2.0.20, colorette@npm:^2.0.7":
   version: 2.0.20
   resolution: "colorette@npm:2.0.20"
   checksum: 0c016fea2b91b733eb9f4bcdb580018f52c0bc0979443dad930e5037a968237ac53d9beb98e218d2e9235834f8eebce7f8e080422d6194e957454255bde71d3d
@@ -10546,6 +10594,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"pirates@npm:^4.0.5":
+  version: 4.0.6
+  resolution: "pirates@npm:4.0.6"
+  checksum: 46a65fefaf19c6f57460388a5af9ab81e3d7fd0e7bc44ca59d753cb5c4d0df97c6c6e583674869762101836d68675f027d60f841c105d72734df9dfca97cbcc6
+  languageName: node
+  linkType: hard
+
 "pkg-dir@npm:^4.1.0":
   version: 4.2.0
   resolution: "pkg-dir@npm:4.2.0"
@@ -11695,7 +11750,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"source-map-support@npm:0.5.21, source-map-support@npm:~0.5.20":
+"source-map-support@npm:0.5.21, source-map-support@npm:^0.5.21, source-map-support@npm:~0.5.20":
   version: 0.5.21
   resolution: "source-map-support@npm:0.5.21"
   dependencies:
@@ -13267,6 +13322,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"yargs@npm:17.7.2, yargs@npm:^17.0.0, yargs@npm:^17.7.2":
+  version: 17.7.2
+  resolution: "yargs@npm:17.7.2"
+  dependencies:
+    cliui: ^8.0.1
+    escalade: ^3.1.1
+    get-caller-file: ^2.0.5
+    require-directory: ^2.1.1
+    string-width: ^4.2.3
+    y18n: ^5.0.5
+    yargs-parser: ^21.1.1
+  checksum: 73b572e863aa4a8cbef323dd911d79d193b772defd5a51aab0aca2d446655216f5002c42c5306033968193bdbf892a7a4c110b0d77954a7fdf563e653967b56a
+  languageName: node
+  linkType: hard
+
 "yargs@npm:^15.0.2":
   version: 15.4.1
   resolution: "yargs@npm:15.4.1"
@@ -13286,21 +13356,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yargs@npm:^17.0.0, yargs@npm:^17.7.2":
-  version: 17.7.2
-  resolution: "yargs@npm:17.7.2"
-  dependencies:
-    cliui: ^8.0.1
-    escalade: ^3.1.1
-    get-caller-file: ^2.0.5
-    require-directory: ^2.1.1
-    string-width: ^4.2.3
-    y18n: ^5.0.5
-    yargs-parser: ^21.1.1
-  checksum: 73b572e863aa4a8cbef323dd911d79d193b772defd5a51aab0aca2d446655216f5002c42c5306033968193bdbf892a7a4c110b0d77954a7fdf563e653967b56a
-  languageName: node
-  linkType: hard
-
 "yen-api@workspace:.":
   version: 0.0.0-use.local
   resolution: "yen-api@workspace:."
@@ -13316,6 +13371,7 @@ __metadata:
     "@knexion/filter": 0.1.0-alpha.10
     "@knexion/soft-delete": 0.1.0-alpha.10
     "@knexion/sort": 0.1.0-alpha.11
+    "@nestjs/axios": 3.0.2
     "@nestjs/cli": 10.2.1
     "@nestjs/common": 10.2.7
     "@nestjs/config": 3.1.1
@@ -13330,6 +13386,7 @@ __metadata:
     "@sentry/types": 7.77.0
     "@sentry/utils": 7.95.0
     "@sinclair/typebox": 0.25.24
+    "@swc-node/register": 1.6.8
     "@swc/cli": 0.1.62
     "@swc/core": 1.3.96
     "@total-typescript/ts-reset": 0.5.1
@@ -13400,6 +13457,7 @@ __metadata:
     vite: 4.5.0
     vite-tsconfig-paths: 4.2.1
     vitest: 0.34.6
+    yargs: 17.7.2
   languageName: unknown
   linkType: soft
 

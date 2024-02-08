@@ -23,7 +23,3 @@ export const clearAll = async (
 
   await getKnexManager().raw(`truncate ${tables_string} cascade`);
 };
-
-export const clearGames = async (): Promise<void> => {
-  await getKnexManager().raw(`truncate games cascade`);
-};

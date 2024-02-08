@@ -39,6 +39,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@knexion/filter", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:0.1.0-alpha.10"],\
             ["@knexion/soft-delete", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:0.1.0-alpha.10"],\
             ["@knexion/sort", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:0.1.0-alpha.11"],\
+            ["@nestjs/axios", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:3.0.2"],\
             ["@nestjs/cli", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:10.2.1"],\
             ["@nestjs/common", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:10.2.7"],\
             ["@nestjs/config", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:3.1.1"],\
@@ -53,6 +54,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@sentry/types", "npm:7.77.0"],\
             ["@sentry/utils", "npm:7.95.0"],\
             ["@sinclair/typebox", "npm:0.25.24"],\
+            ["@swc-node/register", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:1.6.8"],\
             ["@swc/cli", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:0.1.62"],\
             ["@swc/core", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:1.3.96"],\
             ["@total-typescript/ts-reset", "npm:0.5.1"],\
@@ -122,7 +124,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["unplugin-swc", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:1.4.3"],\
             ["vite", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:4.5.0"],\
             ["vite-tsconfig-paths", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:4.2.1"],\
-            ["vitest", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:0.34.6"]\
+            ["vitest", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:0.34.6"],\
+            ["yargs", "npm:17.7.2"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -2616,6 +2619,36 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@nestjs/axios", [\
+        ["npm:3.0.2", {\
+          "packageLocation": "./.yarn/cache/@nestjs-axios-npm-3.0.2-4462b01590-285a735fb5.zip/node_modules/@nestjs/axios/",\
+          "packageDependencies": [\
+            ["@nestjs/axios", "npm:3.0.2"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:3.0.2", {\
+          "packageLocation": "./.yarn/__virtual__/@nestjs-axios-virtual-aff5913035/0/cache/@nestjs-axios-npm-3.0.2-4462b01590-285a735fb5.zip/node_modules/@nestjs/axios/",\
+          "packageDependencies": [\
+            ["@nestjs/axios", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:3.0.2"],\
+            ["@nestjs/common", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:10.2.7"],\
+            ["@types/axios", null],\
+            ["@types/nestjs__common", null],\
+            ["@types/rxjs", null],\
+            ["axios", "npm:1.6.2"],\
+            ["rxjs", "npm:7.8.1"]\
+          ],\
+          "packagePeers": [\
+            "@nestjs/common",\
+            "@types/axios",\
+            "@types/nestjs__common",\
+            "@types/rxjs",\
+            "axios",\
+            "rxjs"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@nestjs/cli", [\
         ["npm:10.2.1", {\
           "packageLocation": "./.yarn/cache/@nestjs-cli-npm-10.2.1-fb11719b41-c0a942d454.zip/node_modules/@nestjs/cli/",\
@@ -2980,7 +3013,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@grpc/proto-loader", null],\
             ["@mikro-orm/core", null],\
             ["@mikro-orm/nestjs", null],\
-            ["@nestjs/axios", null],\
+            ["@nestjs/axios", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:3.0.2"],\
             ["@nestjs/common", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:10.2.7"],\
             ["@nestjs/core", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:10.2.7"],\
             ["@nestjs/microservices", null],\
@@ -4222,6 +4255,75 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@smithy/util-waiter", "npm:2.0.13"],\
             ["@smithy/abort-controller", "npm:2.0.13"],\
             ["@smithy/types", "npm:2.5.0"],\
+            ["tslib", "npm:2.6.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@swc-node/core", [\
+        ["npm:1.12.0", {\
+          "packageLocation": "./.yarn/cache/@swc-node-core-npm-1.12.0-d52be75dd3-a6c9061b1c.zip/node_modules/@swc-node/core/",\
+          "packageDependencies": [\
+            ["@swc-node/core", "npm:1.12.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:f412e170a6c246a20b5f65d44135bd0e34f3e80b92b04e7c39ed6e840944158640466790739b46555861226a6fe8a81d5d1c6660c3178c6d69debd39ba25f8e1#npm:1.12.0", {\
+          "packageLocation": "./.yarn/__virtual__/@swc-node-core-virtual-3065c70a79/0/cache/@swc-node-core-npm-1.12.0-d52be75dd3-a6c9061b1c.zip/node_modules/@swc-node/core/",\
+          "packageDependencies": [\
+            ["@swc-node/core", "virtual:f412e170a6c246a20b5f65d44135bd0e34f3e80b92b04e7c39ed6e840944158640466790739b46555861226a6fe8a81d5d1c6660c3178c6d69debd39ba25f8e1#npm:1.12.0"],\
+            ["@swc/core", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:1.3.96"],\
+            ["@swc/types", null],\
+            ["@types/swc__core", null],\
+            ["@types/swc__types", null]\
+          ],\
+          "packagePeers": [\
+            "@swc/core",\
+            "@swc/types",\
+            "@types/swc__core",\
+            "@types/swc__types"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@swc-node/register", [\
+        ["npm:1.6.8", {\
+          "packageLocation": "./.yarn/cache/@swc-node-register-npm-1.6.8-523e03f1f0-70bfbd1e9d.zip/node_modules/@swc-node/register/",\
+          "packageDependencies": [\
+            ["@swc-node/register", "npm:1.6.8"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:1.6.8", {\
+          "packageLocation": "./.yarn/__virtual__/@swc-node-register-virtual-f412e170a6/0/cache/@swc-node-register-npm-1.6.8-523e03f1f0-70bfbd1e9d.zip/node_modules/@swc-node/register/",\
+          "packageDependencies": [\
+            ["@swc-node/register", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:1.6.8"],\
+            ["@swc-node/core", "virtual:f412e170a6c246a20b5f65d44135bd0e34f3e80b92b04e7c39ed6e840944158640466790739b46555861226a6fe8a81d5d1c6660c3178c6d69debd39ba25f8e1#npm:1.12.0"],\
+            ["@swc-node/sourcemap-support", "npm:0.3.0"],\
+            ["@swc/core", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:1.3.96"],\
+            ["@types/swc__core", null],\
+            ["@types/typescript", null],\
+            ["colorette", "npm:2.0.20"],\
+            ["debug", "virtual:428f325a939c2653ad822eb3d75efb02ac311523dd0d4f9645afc39ea00bd86eceac35a9d59c9b6977d76b670a4ef0ae057ea572338a44729aa592711a8c05a3#npm:4.3.4"],\
+            ["pirates", "npm:4.0.6"],\
+            ["tslib", "npm:2.6.2"],\
+            ["typescript", "patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=5da071"]\
+          ],\
+          "packagePeers": [\
+            "@swc/core",\
+            "@types/swc__core",\
+            "@types/typescript",\
+            "typescript"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@swc-node/sourcemap-support", [\
+        ["npm:0.3.0", {\
+          "packageLocation": "./.yarn/cache/@swc-node-sourcemap-support-npm-0.3.0-fbffedad2a-a3c837ed79.zip/node_modules/@swc-node/sourcemap-support/",\
+          "packageDependencies": [\
+            ["@swc-node/sourcemap-support", "npm:0.3.0"],\
+            ["source-map-support", "npm:0.5.21"],\
             ["tslib", "npm:2.6.2"]\
           ],\
           "linkType": "HARD"\
@@ -12520,6 +12622,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["pirates", [\
+        ["npm:4.0.6", {\
+          "packageLocation": "./.yarn/cache/pirates-npm-4.0.6-a8ec571a43-46a65fefaf.zip/node_modules/pirates/",\
+          "packageDependencies": [\
+            ["pirates", "npm:4.0.6"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["pkg-dir", [\
         ["npm:4.2.0", {\
           "packageLocation": "./.yarn/cache/pkg-dir-npm-4.2.0-2b5d0a8d32-9863e3f351.zip/node_modules/pkg-dir/",\
@@ -15672,6 +15783,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@knexion/filter", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:0.1.0-alpha.10"],\
             ["@knexion/soft-delete", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:0.1.0-alpha.10"],\
             ["@knexion/sort", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:0.1.0-alpha.11"],\
+            ["@nestjs/axios", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:3.0.2"],\
             ["@nestjs/cli", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:10.2.1"],\
             ["@nestjs/common", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:10.2.7"],\
             ["@nestjs/config", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:3.1.1"],\
@@ -15686,6 +15798,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@sentry/types", "npm:7.77.0"],\
             ["@sentry/utils", "npm:7.95.0"],\
             ["@sinclair/typebox", "npm:0.25.24"],\
+            ["@swc-node/register", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:1.6.8"],\
             ["@swc/cli", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:0.1.62"],\
             ["@swc/core", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:1.3.96"],\
             ["@total-typescript/ts-reset", "npm:0.5.1"],\
@@ -15755,7 +15868,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["unplugin-swc", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:1.4.3"],\
             ["vite", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:4.5.0"],\
             ["vite-tsconfig-paths", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:4.2.1"],\
-            ["vitest", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:0.34.6"]\
+            ["vitest", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:0.34.6"],\
+            ["yargs", "npm:17.7.2"]\
           ],\
           "linkType": "SOFT"\
         }]\

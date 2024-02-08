@@ -1,6 +1,6 @@
 {
   "name": "yen-api",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Node.js back-end server",
   "author": "Ihor Andriienko <igorfujitsu@gmail.com>",
   "private": true,
@@ -19,7 +19,8 @@
     "lint:source": "eslint --fix 'src/**/*.ts'",
     "lint:test": "eslint -c .eslintrc.spec.yaml --fix 'test/**/*.spec.ts'",
     "format": "prettier --write {src,test}/**/*.ts",
-    "test": "vitest --run --config './test/vite.config.ts'"
+    "test": "vitest --run --config './test/vite.config.ts'",
+    "yen": "cross-env NODE_ENV=development SWCRC=true node -r @swc-node/register ./scripts/cli/index.ts"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "3.454.0",
@@ -31,6 +32,7 @@
     "@knexion/filter": "0.1.0-alpha.10",
     "@knexion/soft-delete": "0.1.0-alpha.10",
     "@knexion/sort": "0.1.0-alpha.11",
+    "@nestjs/axios": "3.0.2",
     "@nestjs/common": "10.2.7",
     "@nestjs/config": "3.1.1",
     "@nestjs/core": "10.2.7",
@@ -77,6 +79,7 @@
     "@nestjs/cli": "10.2.1",
     "@nestjs/testing": "10.2.7",
     "@sentry/types": "7.77.0",
+    "@swc-node/register": "1.6.8",
     "@swc/cli": "0.1.62",
     "@total-typescript/ts-reset": "0.5.1",
     "@types/chai": "4.3.9",
@@ -118,7 +121,8 @@
     "unplugin-swc": "1.4.3",
     "vite": "4.5.0",
     "vite-tsconfig-paths": "4.2.1",
-    "vitest": "0.34.6"
+    "vitest": "0.34.6",
+    "yargs": "17.7.2"
   },
   "resolutions": {
     "fastify": "4.23.2"
