@@ -1,6 +1,6 @@
 import { Type, type Static } from '@sinclair/typebox';
 
-export const ipGeolocationDto = Type.Object(
+export const ipGeolocationDtoSchema = Type.Object(
   {
     ip_address: Type.String(),
     city: Type.String(),
@@ -13,6 +13,9 @@ export const ipGeolocationDto = Type.Object(
     timezone: Type.String(),
     flag_url: Type.String(),
   },
-  { additionalProperties: false },
+  {
+    additionalProperties: false,
+    $id: 'IpGeolocation',
+  },
 );
-export type IpGeolocationDto = Static<typeof ipGeolocationDto>;
+export type IpGeolocationDto = Static<typeof ipGeolocationDtoSchema>;

@@ -5,6 +5,7 @@ import { appConfig } from '@config/app.config';
 import { auth0Config } from '@config/auth0.config';
 import { featuresConfig } from '@config/features.config';
 import { ipGeolocationConfig } from '@config/ip-geolocation.config';
+import { iqAirConfig } from '@config/iqair.config';
 
 @Module({
   imports: [
@@ -17,6 +18,7 @@ import { ipGeolocationConfig } from '@config/ip-geolocation.config';
         dbConfig,
         featuresConfig,
         ipGeolocationConfig,
+        iqAirConfig,
       ],
     }),
   ],
