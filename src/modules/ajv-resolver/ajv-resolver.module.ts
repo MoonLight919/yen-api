@@ -22,6 +22,7 @@ import {
 } from '@resources/user/schemas';
 import { ipGeolocationDtoSchema } from '@resources/ip-geolocation/contracts';
 import { iqAirDtoSchema } from '@resources/iqair/contracts';
+import { alertsInUaDtoSchema } from '@resources/alerts-in-ua/contracts';
 
 export const componentSchemas = [
   idSchema,
@@ -38,6 +39,7 @@ export const componentSchemas = [
   retrieveCurrentUserResponseDtoSchema,
   ipGeolocationDtoSchema,
   iqAirDtoSchema,
+  alertsInUaDtoSchema,
 ];
 
 @Module({})

@@ -6,6 +6,7 @@ import { auth0Config } from '@config/auth0.config';
 import { featuresConfig } from '@config/features.config';
 import { ipGeolocationConfig } from '@config/ip-geolocation.config';
 import { iqAirConfig } from '@config/iqair.config';
+import { alertsInUaConfig } from '@config/alerts-in-ua.config';
 
 @Module({
   imports: [
@@ -19,6 +20,7 @@ import { iqAirConfig } from '@config/iqair.config';
         featuresConfig,
         ipGeolocationConfig,
         iqAirConfig,
+        alertsInUaConfig,
       ],
     }),
   ],
