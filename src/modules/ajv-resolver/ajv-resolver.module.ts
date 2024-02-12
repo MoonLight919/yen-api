@@ -20,6 +20,8 @@ import {
   userDtoSchema,
   retrieveCurrentUserResponseDtoSchema,
 } from '@resources/user/schemas';
+import { ipGeolocationDtoSchema } from '@resources/ip-geolocation/contracts';
+import { iqAirDtoSchema } from '@resources/iqair/contracts';
 
 export const componentSchemas = [
   idSchema,
@@ -34,6 +36,8 @@ export const componentSchemas = [
   dateFilterDtoSchema,
   userDtoSchema,
   retrieveCurrentUserResponseDtoSchema,
+  ipGeolocationDtoSchema,
+  iqAirDtoSchema,
 ];
 
 @Module({})

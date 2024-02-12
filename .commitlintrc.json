@@ -18,7 +18,8 @@
         "auth",
         "auth0",
         "config",
-        "ip-geolocation"
+        "ip-geolocation",
+        "iqair"
       ]
     ],
     "type-enum": [

@@ -1,4 +1,4 @@
-import { Module } from '@nestjs/common';
+import { forwardRef, Module } from '@nestjs/common';
 import { APP_FILTER } from '@nestjs/core';
 import { AuthenticationGuard } from '@resources/auth/guards';
 import { UserModule } from '../user/user.module';
@@ -7,7 +7,7 @@ import { AuthenticationService, AuthService, JwtService } from './services';
 import { AuthExceptionFilter } from './filters';
 
 @Module({
-  imports: [UserModule],
+  imports: [forwardRef(() => UserModule)],
   controllers: [Auth0Controller],
   providers: [
     {
