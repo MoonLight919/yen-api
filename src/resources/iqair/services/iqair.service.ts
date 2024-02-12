@@ -28,7 +28,7 @@ export class IqAirService {
     longitude: number,
   ): Promise<IqAirDto> {
     const response = await this.httpService
-      .get(`${this.iqAirConfig.baseUrl as string}nearest_city`, {
+      .get(`${this.iqAirConfig.baseUrl as string}/nearest_city`, {
         params: {
           key: this.iqAirConfig.apiKey,
           lat: latitude,

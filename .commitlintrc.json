@@ -19,7 +19,8 @@
         "auth0",
         "config",
         "ip-geolocation",
-        "iqair"
+        "iqair",
+        "alerts-in-ua"
       ]
     ],
     "type-enum": [

@@ -11,6 +11,7 @@ import { type AppConfig, appConfig } from '@config/app.config';
 import { AjvResolverModule } from '@modules/ajv-resolver';
 import { IpGeolocationModule } from '@resources/ip-geolocation/ip-geolocation.module';
 import { IqAirModule } from '@resources/iqair/iqair.module';
+import { AlertsInUaModule } from '@resources/alerts-in-ua/alerts-in-ua.module';
 import { AuthModule } from './auth/auth.module';
 import { UserModule } from './user/user.module';
 
@@ -39,6 +40,7 @@ import { UserModule } from './user/user.module';
     UserModule,
     IpGeolocationModule,
     IqAirModule,
+    AlertsInUaModule,
   ],
 })
 export class AppModule {}
