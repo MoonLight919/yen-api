@@ -19,7 +19,11 @@ export const dbConfig = registerAs('db', () => {
     keepAlive: true,
   };
   if (connectionString) {
-    connectionOptions = { ...connectionOptions, connectionString };
+    connectionOptions = {
+      ...connectionOptions,
+      connectionString,
+      ssl,
+    };
   } else {
     connectionOptions = {
       ...connectionOptions,
