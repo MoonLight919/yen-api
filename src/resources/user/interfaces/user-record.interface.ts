@@ -1,9 +1,12 @@
 import { type ID, type ResourceObject } from '@lib/db';
-import { type Nullable } from '@lib/interfaces';
 
 export interface UserRecord extends ResourceObject {
-  sub: Nullable<string>;
-  phone_number: Nullable<string>;
+  sub: string;
+  phone_number: string;
+  signup_city: string;
+  signup_country: string;
+  signup_latitude: number;
+  signup_longitude: number;
 }
 
 export interface IUserRecordResource extends ResourceObject {

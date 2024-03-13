@@ -171,6 +171,10 @@ export const signupBodyDtoSchema = Type.Object(
   { additionalProperties: false },
 );
 
+export type Auth0EventPostUserRegistrationBodyDto = Static<
+  typeof auth0EventLoginBodyDtoSchema
+>;
+
 export const postLoginBodyDtoSchema = Type.Object(
   {
     event: auth0EventLoginBodyDtoSchema,

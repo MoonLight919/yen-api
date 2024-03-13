@@ -14,7 +14,7 @@ export const auth0EventUserDtoSchema = Type.Object(
     multifactor: Type.Optional(Type.Array(Type.String())),
     name: Type.Optional(Type.String()),
     nickname: Type.Optional(Type.String()),
-    phone_number: Type.Optional(Type.String()),
+    phoneNumber: Type.Optional(Type.String()),
     phone_verified: Type.Optional(Type.Boolean()),
     picture: Type.Optional(Type.String()),
     updated_at: Type.Optional(Type.String()),

@@ -9,7 +9,7 @@ import {
 } from '@lib/db';
 import { type ServiceOptions } from '@lib/interfaces';
 import { UserPhoneNumberAlreadyExistsError } from '../errors';
-import { type UserRecord } from '../interfaces';
+import { type UserRecord, type UserSignUpPayload } from '../interfaces';
 import { UserRepository } from '../repositories';
 
 @Injectable()
@@ -26,7 +26,7 @@ export class UserService {
   }
 
   public async create(
-    user: OmitDefaultResourceFields<UserRecord>,
+    user: UserSignUpPayload,
     options?: ServiceOptions<UserRecord, UserRecord>,
   ): Promise<UserRecord | Error> {
     return this.transactionService.withTransaction(async (trx) => {

@@ -6,7 +6,10 @@ import { AuthService } from '../services';
 import { Auth0KeyAuthenticationGuard } from '../guards';
 import { InvalidUserFromAuth0EventError } from '../errors';
 import { InvalidUserFromAuth0EventException } from '../exceptions';
-import { type Auth0EventLoginBodyDto, signupBodyDtoSchema } from '../schemas';
+import {
+  type Auth0EventPostUserRegistrationBodyDto,
+  signupBodyDtoSchema,
+} from '../schemas';
 
 @ApiExcludeController(true)
 @ApiTags('Auth')
@@ -24,7 +27,7 @@ export class Auth0Controller {
     body: signupBodyDtoSchema,
   })
   public async postRegistration(
-    @Body() auth0Event: Auth0EventLoginBodyDto,
+    @Body() auth0Event: Auth0EventPostUserRegistrationBodyDto,
   ): Promise<void> {
     const userOrError = await this.authService.postRegistration(auth0Event);
     httpAssert(
