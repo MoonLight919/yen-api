@@ -18,7 +18,6 @@ export const resourceObjectSchema = Type.Object(
     created_at: Type.Number(),
     updated_at: Type.Number(),
     deleted_at: nullable(Type.Number()),
-    object: Type.String(),
   },
   { $id: 'ResourceObject' },
 );
@@ -31,7 +30,7 @@ export const extendResourceObject = <T extends TObject>(
   schema: T,
   options: ObjectOptions = {},
 ): TIntersect<[typeof resourceObjectSchema, T]> =>
-  Type.Intersect([Type.Omit(resourceObjectSchema, ['object']), schema], {
+  Type.Intersect([resourceObjectSchema, schema], {
     additionalProperties: false,
     ...options,
   });

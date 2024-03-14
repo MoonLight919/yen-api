@@ -6,7 +6,7 @@ import { ref } from '@lib/schemas';
 import { AlertsInUaService } from '../services';
 import { type AlertsInUaDto, alertsInUaDtoSchema } from '../contracts';
 
-@ApiTags('Alers-in-UA')
+@ApiTags('Alerts-in-UA')
 @Controller('alerts-in-ua')
 @AuthProtected()
 export class AlertsInUaController {
