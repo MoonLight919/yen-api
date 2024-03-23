@@ -1,6 +1,17 @@
 import { type Static, Type } from '@sinclair/typebox';
 import { auth0EventUserDtoSchema } from './auth0-event-user-dto.schema';
 
+export const auth0AuthorisationBodyDtoSchema = Type.Object(
+  {
+    code: Type.String(),
+  },
+  { additionalProperties: false },
+);
+
+export type Auth0AuthorisationBodyDto = Static<
+  typeof auth0AuthorisationBodyDtoSchema
+>;
+
 export const auth0EventAuthenticationMethodSchema = Type.Object(
   {
     name: Type.Optional(Type.String()),

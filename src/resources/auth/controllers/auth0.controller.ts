@@ -7,6 +7,8 @@ import { Auth0KeyAuthenticationGuard } from '../guards';
 import { InvalidUserFromAuth0EventError } from '../errors';
 import { InvalidUserFromAuth0EventException } from '../exceptions';
 import {
+  Auth0AuthorisationBodyDto,
+  auth0AuthorisationBodyDtoSchema,
   type Auth0EventPostUserRegistrationBodyDto,
   signupBodyDtoSchema,
 } from '../schemas';
@@ -17,6 +19,20 @@ import {
 @UseGuards(Auth0KeyAuthenticationGuard)
 export class Auth0Controller {
   constructor(private readonly authService: AuthService) {}
+
+  @Post('authorize')
+  @ApiOperation({
+    summary: 'Get an access token',
+  })
+  @RestMethod({
+    statusCode: 200,
+    body: auth0AuthorisationBodyDtoSchema,
+  })
+  public async authorize(
+    @Body() auth0AuthorisationBodyDto: Auth0AuthorisationBodyDto,
+  ): Promise<string> {
+    return this.authService.authorize(auth0AuthorisationBodyDto);
+  }
 
   @Post('post-registration')
   @ApiOperation({

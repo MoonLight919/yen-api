@@ -1,11 +1,50 @@
-import { Injectable } from '@nestjs/common';
+import { Inject, Injectable } from '@nestjs/common';
+import { HttpService } from '@nestjs/axios';
+import { ConfigType } from '@nestjs/config';
+import { auth0Config as a0c } from '@config/auth0.config';
 import { UserService } from '@resources/user/services';
 import { type UserRecord } from '@resources/user/interfaces';
-import { type Auth0EventPostUserRegistrationBodyDto } from '../schemas';
+import {
+  type Auth0AuthorisationBodyDto,
+  type Auth0EventPostUserRegistrationBodyDto,
+} from '../schemas';
 
 @Injectable()
 export class AuthService {
-  constructor(private readonly userService: UserService) {}
+  constructor(
+    private readonly userService: UserService,
+    private readonly httpService: HttpService,
+    @Inject(a0c.KEY)
+    private readonly auth0Config: ConfigType<typeof a0c>,
+  ) {}
+
+  public async authorize(
+    auth0AuthorisationBodyDto: Auth0AuthorisationBodyDto,
+  ): Promise<string> {
+    const response = await this.httpService
+      .post(
+        `${this.auth0Config.domain as string}/oauth/token`,
+        new URLSearchParams({
+          grant_type: 'authorization_code',
+          client_id: this.auth0Config.client_id as string,
+          client_secret: this.auth0Config.client_secret as string,
+          code: auth0AuthorisationBodyDto.code,
+          redirect_uri: this.auth0Config.redirect_url as string,
+        }),
+        {
+          headers: {
+            'content-type': 'application/x-www-form-urlencoded',
+          },
+        },
+      )
+      .toPromise();
+
+    if (!response) {
+      throw new Error(`Post request to ${this.auth0Config.domain} failed`);
+    }
+
+    return response.data.access_token;
+  }
 
   public async postRegistration(
     auth0Event: Auth0EventPostUserRegistrationBodyDto,
