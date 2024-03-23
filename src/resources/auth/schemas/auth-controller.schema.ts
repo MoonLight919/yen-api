@@ -1,6 +1,17 @@
 import { type Static, Type } from '@sinclair/typebox';
 import { auth0EventUserDtoSchema } from './auth0-event-user-dto.schema';
 
+export const auth0AuthorisationBodyDtoSchema = Type.Object(
+  {
+    code: Type.String(),
+  },
+  { additionalProperties: false },
+);
+
+export type Auth0AuthorisationBodyDto = Static<
+  typeof auth0AuthorisationBodyDtoSchema
+>;
+
 export const auth0EventAuthenticationMethodSchema = Type.Object(
   {
     name: Type.Optional(Type.String()),
@@ -74,12 +85,7 @@ export const auth0EventRequestSchema = Type.Object(
     ip: Type.Optional(Type.String()),
     language: Type.Optional(Type.String()),
     method: Type.Optional(Type.String()),
-    query: Type.Optional(
-      Type.Object({
-        username: Type.Optional(Type.String()),
-        device_id: Type.Optional(Type.String()),
-      }),
-    ),
+    query: Type.Optional(Type.Object({})),
     user_agent: Type.Optional(Type.String()),
   },
   { additionalProperties: false },

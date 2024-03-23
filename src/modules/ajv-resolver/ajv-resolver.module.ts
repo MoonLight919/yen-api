@@ -4,7 +4,6 @@ import { type TSchema } from '@sinclair/typebox';
 import {
   exceptionSchema,
   getSchemaPath,
-  headersSchema,
   httpExceptionSchema,
   validationErrorSchema,
   validationExceptionSchema,
@@ -30,7 +29,6 @@ export const componentSchemas = [
   validationErrorSchema,
   validationExceptionSchema,
   httpExceptionSchema,
-  headersSchema,
   dataOptionsDtoSchema,
   listOptionsDtoSchema,
   resourceObjectSchema,

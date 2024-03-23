@@ -34,10 +34,7 @@ describe('User Profile API', () => {
     it('should return profile data', async () => {
       const { response, payload } = await request('profile');
       expectStatusCode(response, 200);
-      expect(payload)
-        .property('user')
-        .excluding(['sub', 'device_id'])
-        .deep.eq(testUser);
+      expect(payload).property('user').excluding(['sub']).deep.eq(testUser);
     });
   });
 });

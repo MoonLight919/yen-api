@@ -38,7 +38,7 @@ export const setupApplication = async (
     'sentry-trace',
     'baggage',
     'idempotency-key',
-    'x-device-id',
+    'X-API-Key',
   ];
 
   const fc = app.get<FeaturesConfig>(featuresConfig.KEY);

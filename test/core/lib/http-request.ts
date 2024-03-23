@@ -7,7 +7,6 @@ import { type NestFastifyApplication } from '@nestjs/platform-fastify';
 
 export interface HttpRequestOptions extends Omit<InjectOptions, 'query'> {
   jwt?: string | null;
-  deviceId?: string | null;
   query?: Record<string, unknown>;
 }
 
@@ -40,10 +39,9 @@ export const buildHttpRequest = (
     options: HttpRequestOptions = {},
   ): HttpRequestResult<T> => {
     // eslint-disable-next-line prefer-const
-    let { jwt, payload, headers = {}, deviceId, ...otherOptions } = options;
+    let { jwt, payload, headers = {}, ...otherOptions } = options;
     const { query, method = 'GET', ...injectOptions } = otherOptions;
     jwt = valueOrUndefined(jwt, parentOptions?.jwt);
-    deviceId = valueOrUndefined(deviceId, parentOptions?.deviceId);
     if (typeof payload === 'object') {
       headers = {
         ...headers,
@@ -60,12 +58,7 @@ export const buildHttpRequest = (
         authorization: `Bearer ${jwt}`,
       };
     }
-    if (deviceId) {
-      headers = {
-        ...headers,
-        'x-device-id': deviceId,
-      };
-    }
+
     headers = {
       ...headers,
       ...(parentOptions?.headers || {}),
