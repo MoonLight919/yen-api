@@ -1,32 +1,23 @@
-import { Logger } from '@nestjs/common';
 import { type Observable } from 'rxjs';
-import { delay, retryWhen, scan } from 'rxjs/operators';
+import { retryWhen, delay, scan } from 'rxjs/operators';
+import { type Logger } from '@nestjs/common';
 
-export function handleRetry(
+export const handleRetry = (
   name: string,
+  logger: Logger,
   retryAttempts = 9,
   retryDelay = 3000,
-  verboseRetryLog = false,
-  toRetry?: (err: unknown) => boolean,
-): <T>(source: Observable<T>) => Observable<T> {
-  const logger = new Logger(name);
+): (<T>(source: Observable<T>) => Observable<T>) => {
   return <T>(source: Observable<T>) =>
     source.pipe(
       retryWhen((e) =>
         e.pipe(
-          scan((errorCount, error: Error) => {
-            if (toRetry && !toRetry(error)) {
-              throw error;
-            }
-            const verboseMessage = verboseRetryLog
-              ? ` Message: ${error.message}.`
-              : '';
-
+          scan((errorCount, error) => {
             logger.error(
-              `Unable to connect to the ${name}.${verboseMessage} Retrying (${
+              `Unable to connect to the ${name}. Retrying (${
                 errorCount + 1
               })...`,
-              error.stack,
+              '',
             );
             if (errorCount + 1 >= retryAttempts) {
               throw error;
@@ -37,4 +28,4 @@ export function handleRetry(
         ),
       ),
     );
-}
+};

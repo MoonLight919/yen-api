@@ -20,7 +20,8 @@
         "config",
         "ip-geolocation",
         "iqair",
-        "alerts-in-ua"
+        "alerts-in-ua",
+        "twilio"
       ]
     ],
     "type-enum": [

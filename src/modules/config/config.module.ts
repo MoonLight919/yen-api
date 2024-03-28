@@ -7,6 +7,7 @@ import { featuresConfig } from '@config/features.config';
 import { ipGeolocationConfig } from '@config/ip-geolocation.config';
 import { iqAirConfig } from '@config/iqair.config';
 import { alertsInUaConfig } from '@config/alerts-in-ua.config';
+import { twilioConfig } from '@config/twilio.config';
 
 @Module({
   imports: [
@@ -21,6 +22,7 @@ import { alertsInUaConfig } from '@config/alerts-in-ua.config';
         ipGeolocationConfig,
         iqAirConfig,
         alertsInUaConfig,
+        twilioConfig,
       ],
     }),
   ],

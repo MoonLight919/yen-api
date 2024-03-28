@@ -14,6 +14,7 @@ import { IqAirModule } from '@resources/iqair/iqair.module';
 import { AlertsInUaModule } from '@resources/alerts-in-ua/alerts-in-ua.module';
 import { AuthModule } from './auth/auth.module';
 import { UserModule } from './user/user.module';
+import { TwilioModule } from './twilio/twilio.module';
 
 @Module({
   imports: [
@@ -41,6 +42,7 @@ import { UserModule } from './user/user.module';
     IpGeolocationModule,
     IqAirModule,
     AlertsInUaModule,
+    TwilioModule,
   ],
 })
 export class AppModule {}
