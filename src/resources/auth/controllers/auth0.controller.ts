@@ -2,6 +2,7 @@ import { UseGuards, Post, Body, Controller } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiExcludeController } from '@nestjs/swagger';
 import { RestMethod } from '@modules/core/decorators';
 import { httpAssert, isError } from '@utils';
+import { AuthProtected } from '@resources/auth/decorators';
 import { AuthService } from '../services';
 import { Auth0KeyAuthenticationGuard } from '../guards';
 import { InvalidUserFromAuth0EventError } from '../errors';
@@ -16,9 +17,18 @@ import {
 @ApiExcludeController(true)
 @ApiTags('Auth')
 @Controller('auth')
-@UseGuards(Auth0KeyAuthenticationGuard)
 export class Auth0Controller {
   constructor(private readonly authService: AuthService) {}
+
+  @Post('validate-token')
+  @ApiOperation({
+    summary: 'Access token validation',
+  })
+  @RestMethod({
+    statusCode: 200,
+  })
+  @AuthProtected()
+  public async validateToken(): Promise<void> {}
 
   @Post('authorize')
   @ApiOperation({
@@ -28,6 +38,7 @@ export class Auth0Controller {
     statusCode: 200,
     body: auth0AuthorisationBodyDtoSchema,
   })
+  @UseGuards(Auth0KeyAuthenticationGuard)
   public async authorize(
     @Body() auth0AuthorisationBodyDto: Auth0AuthorisationBodyDto,
   ): Promise<string | null> {
@@ -42,6 +53,7 @@ export class Auth0Controller {
     statusCode: 204,
     body: signupBodyDtoSchema,
   })
+  @UseGuards(Auth0KeyAuthenticationGuard)
   public async postRegistration(
     @Body() auth0Event: Auth0EventPostUserRegistrationBodyDto,
   ): Promise<void> {
