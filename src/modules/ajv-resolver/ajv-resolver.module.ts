@@ -17,7 +17,7 @@ import {
 } from '@lib/db';
 import {
   userDtoSchema,
-  retrieveCurrentUserResponseDtoSchema,
+  patchUserRequestBodyDtoSchema,
 } from '@resources/user/schemas';
 import { ipGeolocationDtoSchema } from '@resources/ip-geolocation/contracts';
 import { iqAirDtoSchema } from '@resources/iqair/contracts';
@@ -34,7 +34,7 @@ export const componentSchemas = [
   resourceObjectSchema,
   dateFilterDtoSchema,
   userDtoSchema,
-  retrieveCurrentUserResponseDtoSchema,
+  patchUserRequestBodyDtoSchema,
   ipGeolocationDtoSchema,
   iqAirDtoSchema,
   alertsInUaDtoSchema,

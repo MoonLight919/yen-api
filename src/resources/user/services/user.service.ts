@@ -31,10 +31,17 @@ export class UserService {
   ): Promise<UserRecord | Error> {
     return this.transactionService.withTransaction(async (trx) => {
       try {
-        return await this.userRepository.create(user, {
-          intercept: options?.intercept,
-          transaction: trx.knexTrx,
-        });
+        return await this.userRepository.create(
+          {
+            ...user,
+            default_region: null,
+            current_region: null,
+          },
+          {
+            intercept: options?.intercept,
+            transaction: trx.knexTrx,
+          },
+        );
       } catch (err) {
         if (err instanceof UserPhoneNumberAlreadyExistsError) {
           return err;
