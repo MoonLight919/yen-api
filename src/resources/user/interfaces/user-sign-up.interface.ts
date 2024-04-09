@@ -1,8 +1,8 @@
 export interface UserSignUpPayload {
   phone_number: string;
   sub: string;
-  signup_city: string;
-  signup_country: string;
-  signup_latitude: number;
-  signup_longitude: number;
+  default_city: string;
+  default_country: string;
+  default_latitude: number;
+  default_longitude: number;
 }

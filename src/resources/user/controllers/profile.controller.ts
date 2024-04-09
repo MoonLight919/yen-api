@@ -22,9 +22,7 @@ export class ProfileController {
   @Patch()
   @ApiOperation({ summary: 'Update a user profile' })
   @RestMethod({
-    responses: {
-      200: { schema: ref(patchUserRequestBodyDtoSchema) },
-    },
+    body: patchUserRequestBodyDtoSchema,
   })
   public async update(
     @AuthenticatedUser() user: UserRecord,

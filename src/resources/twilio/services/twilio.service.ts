@@ -2,7 +2,6 @@ import { Twilio } from 'twilio';
 import { Injectable, Logger, Inject } from '@nestjs/common';
 import { ConfigType } from '@nestjs/config';
 import { twilioConfig as tc } from '@config/twilio.config';
-import { type UserRecord } from '@resources/user/interfaces';
 import { type TwilioMessageOptions } from '../interfaces';
 
 @Injectable()
@@ -16,9 +15,16 @@ export class TwilioService {
     this.initClient();
   }
 
-  public async testMessage(user: UserRecord): Promise<void> {
+  public async notify(phoneNumber: string, body: string): Promise<void> {
     await this.sendMessage({
-      to: user.phone_number,
+      to: phoneNumber,
+      body,
+    });
+  }
+
+  public async testMessage(phoneNumber: string): Promise<void> {
+    await this.sendMessage({
+      to: phoneNumber,
       body: 'This is your test message from YeNebezpeka!',
     });
   }
