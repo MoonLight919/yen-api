@@ -66,10 +66,10 @@ export class AuthService {
       return this.userService.create({
         phone_number: phoneNumber,
         sub: auth0Event.user.user_id as string,
-        signup_city: auth0Event.request.geoip!.cityName as string,
-        signup_country: auth0Event.request.geoip!.countryName as string,
-        signup_latitude: auth0Event.request.geoip!.latitude as number,
-        signup_longitude: auth0Event.request.geoip!.longitude as number,
+        default_city: auth0Event.request.geoip!.cityName as string,
+        default_country: auth0Event.request.geoip!.countryName as string,
+        default_latitude: auth0Event.request.geoip!.latitude as number,
+        default_longitude: auth0Event.request.geoip!.longitude as number,
       });
     }
   }

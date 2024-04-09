@@ -16,6 +16,6 @@ export class TwilioController {
   public async testMessage(
     @AuthenticatedUser() user: UserRecord,
   ): Promise<void> {
-    await this.twilioService.testMessage(user);
+    await this.twilioService.testMessage(user.phone_number);
   }
 }
