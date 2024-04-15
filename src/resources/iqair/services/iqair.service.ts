@@ -2,7 +2,9 @@ import { Inject, Injectable } from '@nestjs/common';
 import { HttpService } from '@nestjs/axios';
 import { ConfigType } from '@nestjs/config';
 import { iqAirConfig as iqac } from '@config/iqair.config';
-import { IpGeolocationService } from '@resources/ip-geolocation/services';
+import { type UserRecord } from '@resources/user/interfaces';
+import { TwilioService } from '@resources/twilio/services';
+import { MainPollutants } from '@resources/iqair/iqair.constants';
 import { type IqAirDto } from '../contracts';
 
 @Injectable()
@@ -11,15 +13,21 @@ export class IqAirService {
     private readonly httpService: HttpService,
     @Inject(iqac.KEY)
     private readonly iqAirConfig: ConfigType<typeof iqac>,
-    private readonly ipGeolocationService: IpGeolocationService,
+    private readonly twilioService: TwilioService,
   ) {}
 
-  public async retrieveById(ipAddress: string): Promise<IqAirDto> {
-    const geolocation = await this.ipGeolocationService.retrieve(ipAddress);
+  public async notifyAboutAirQualityByUser(user: UserRecord): Promise<void> {
+    const latitude = user.current_latitude ?? user.default_latitude;
+    const longitude = user.current_longitude ?? user.default_longitude;
 
-    return this.retrieveByCoordinates(
-      geolocation.latitude,
-      geolocation.longitude,
+    const data = await this.retrieveByCoordinates(latitude, longitude);
+
+    return await this.twilioService.notify(
+      user.phone_number,
+      `Air quality in ${data.city} is ${data.pollution.aqi_value}\n` +
+        `The main pollutant is ${
+          MainPollutants[data.pollution.main_pollutant]
+        }`,
     );
   }
 
@@ -43,6 +51,7 @@ export class IqAirService {
     const responseData = httpResponseData.data.current;
 
     return {
+      city: httpResponseData.data.city,
       pollution: {
         aqi_value: responseData.pollution.aqius,
         main_pollutant: responseData.pollution.mainus,

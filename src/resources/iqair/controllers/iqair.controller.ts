@@ -1,28 +1,21 @@
 import { ApiOperation, ApiTags } from '@nestjs/swagger';
-import { Controller, Get, Param } from '@nestjs/common';
-import { AuthProtected } from '@resources/auth/decorators';
+import { Controller, Post } from '@nestjs/common';
+import { AuthenticatedUser, AuthProtected } from '@resources/auth/decorators';
 import { RestMethod } from '@modules/core';
-import { ref } from '@lib/schemas';
+import { UserRecord } from '@resources/user/interfaces';
 import { IqAirService } from '../services';
-import { type IqAirDto, iqAirDtoSchema } from '../contracts';
 
 @ApiTags('IQAir')
 @Controller('iqair')
 @AuthProtected()
 export class IqAirController {
   constructor(private readonly iqAirService: IqAirService) {}
-  @Get(':ip_address')
-  @ApiOperation({ summary: 'Retrieve IQAir data by IP address' })
-  @RestMethod({
-    responses: {
-      200: {
-        schema: ref(iqAirDtoSchema),
-      },
-    },
+  @Post('/air-quality/current-information')
+  @ApiOperation({
+    summary: 'Send notification about current information of air quality',
   })
-  public async retrieve(
-    @Param('ip_address') ipAddress: string,
-  ): Promise<IqAirDto> {
-    return this.iqAirService.retrieveById(ipAddress);
+  @RestMethod({})
+  public async notify(@AuthenticatedUser() user: UserRecord): Promise<void> {
+    return this.iqAirService.notifyAboutAirQualityByUser(user);
   }
 }

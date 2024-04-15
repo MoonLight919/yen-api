@@ -2,6 +2,7 @@ import { Type, type Static } from '@sinclair/typebox';
 
 export const iqAirDtoSchema = Type.Object(
   {
+    city: Type.String(),
     pollution: Type.Object({
       aqi_value: Type.Number(),
       main_pollutant: Type.String(),
