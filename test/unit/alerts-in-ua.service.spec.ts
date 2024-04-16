@@ -22,7 +22,7 @@ describe('AlertsInUaService', () => {
   let testUser: UserRecord;
   let app: NestFastifyApplication;
   let alertsInUaService: AlertsInUaService;
-  let receiveMethodSpy: SpyInstance;
+  let retrieveMethodSpy: SpyInstance;
   let notifySpy: SpyInstance;
 
   beforeAll(async () => {
@@ -41,7 +41,7 @@ describe('AlertsInUaService', () => {
       vi.fn().mockImplementation(() => {}),
       twilioService,
     );
-    receiveMethodSpy = vi.spyOn(alertsInUaService, 'retrieve');
+    retrieveMethodSpy = vi.spyOn(alertsInUaService, 'retrieve');
   });
 
   afterEach(() => {
@@ -55,7 +55,7 @@ describe('AlertsInUaService', () => {
 
   describe('notifyByUser method', () => {
     it('should construct a notification body for the single alert', async () => {
-      receiveMethodSpy.mockResolvedValueOnce([
+      retrieveMethodSpy.mockResolvedValueOnce([
         {
           region: 'Луганська область',
           type: 'air_raid',
@@ -75,7 +75,7 @@ describe('AlertsInUaService', () => {
     });
 
     it('should construct a notification body for multiple alerts', async () => {
-      receiveMethodSpy.mockResolvedValueOnce([
+      retrieveMethodSpy.mockResolvedValueOnce([
         {
           region: 'Дніпропетровська область',
           type: 'artillery_shelling',
@@ -103,7 +103,7 @@ describe('AlertsInUaService', () => {
     });
 
     it('should construct a notification body for the specific region', async () => {
-      receiveMethodSpy.mockResolvedValueOnce([
+      retrieveMethodSpy.mockResolvedValueOnce([
         {
           region: 'Луганська область',
           type: 'air_raid',
@@ -136,7 +136,7 @@ describe('AlertsInUaService', () => {
     });
 
     it('should handle the absence of alerts while requesting information for the specific region', async () => {
-      receiveMethodSpy.mockResolvedValueOnce([
+      retrieveMethodSpy.mockResolvedValueOnce([
         {
           region: 'Луганська область',
           type: 'air_raid',
