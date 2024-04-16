@@ -27,7 +27,7 @@ export class IqAirService {
 
     return await this.twilioService.notify(
       user.phone_number,
-      `Weather in ${data.city}: is ${
+      `Weather in ${data.city}: ${
         WeatherTypes[data.weather.weather_icon_code]
       }`,
     );
@@ -51,9 +51,9 @@ export class IqAirService {
       user.phone_number,
       `Wind speed in ${data.city} is ${windSpeed} m/s\n` +
         (speedDescription ?? '') +
-        directionDescription
-        ? `\nThe wind direction is ${directionDescription}`
-        : '',
+        (directionDescription
+          ? `\nThe wind direction is ${directionDescription}`
+          : ''),
     );
   }
 
@@ -113,8 +113,10 @@ export class IqAirService {
   ): string | undefined {
     return collection.find((description) => {
       return (
-        (!description.lower_border || value >= description.lower_border) &&
-        (!description.upper_border || value <= description.upper_border)
+        (description.lower_border === undefined ||
+          value >= description.lower_border) &&
+        (description.upper_border === undefined ||
+          value <= description.upper_border)
       );
     })?.description;
   }

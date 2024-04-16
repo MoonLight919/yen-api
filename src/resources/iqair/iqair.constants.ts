@@ -37,72 +37,72 @@ export const WindSpeedDescriptions: IqAirValueDescription[] = [
     lower_border: 0,
     upper_border: 1,
     description:
-      'Air quality is acceptable. However, there may be a risk for some people, particularly those who are unusually sensitive to air pollution',
+      'Light Air. Direction of wind shown by smoke drift, not by wind vanes. Little if any movement with flags. Wind barely moves tree leaves',
   },
   {
     lower_border: 1,
     upper_border: 3,
     description:
-      'Air quality is acceptable. However, there may be a risk for some people, particularly those who are unusually sensitive to air pollution',
+      'Light Breeze. Wind felt on face. Leaves rustle and small twigs move. Ordinary wind vanes move',
   },
   {
     lower_border: 3,
     upper_border: 5,
     description:
-      'Air quality is acceptable. However, there may be a risk for some people, particularly those who are unusually sensitive to air pollution',
+      'Gentle Breeze. Leaves and small twigs in constant motion. Wind blows up dry leaves from the ground. Flags are extended out',
   },
   {
     lower_border: 5,
     upper_border: 8,
     description:
-      'Air quality is acceptable. However, there may be a risk for some people, particularly those who are unusually sensitive to air pollution',
+      'Moderate Breeze. Wind moves small branches. Wind raises dust and loose paper from the ground and drives them along',
   },
   {
     lower_border: 8,
     upper_border: 11,
     description:
-      'Air quality is acceptable. However, there may be a risk for some people, particularly those who are unusually sensitive to air pollution',
+      'Fresh Breeze. Large branches and small trees in leaf begin to sway. Crested wavelets form on inland lakes and large rivers',
   },
   {
     lower_border: 11,
     upper_border: 14,
     description:
-      'Air quality is acceptable. However, there may be a risk for some people, particularly those who are unusually sensitive to air pollution',
+      'Strong Breeze. Large branches in continuous motion. Whistling sounds heard in overhead or nearby power and telephone lines. Umbrellas used with difficulty',
   },
   {
     lower_border: 14,
     upper_border: 17,
     description:
-      'Air quality is acceptable. However, there may be a risk for some people, particularly those who are unusually sensitive to air pollution',
+      'Near Gale. Whole trees in motion. Inconvenience felt when walking against the wind',
   },
   {
     lower_border: 17,
     upper_border: 21,
     description:
-      'Air quality is acceptable. However, there may be a risk for some people, particularly those who are unusually sensitive to air pollution',
+      'Gale. Wind breaks twigs and small branches. Wind generally impedes walking',
   },
   {
     lower_border: 21,
     upper_border: 24,
     description:
-      'Air quality is acceptable. However, there may be a risk for some people, particularly those who are unusually sensitive to air pollution',
+      'Strong Gale. Structural damage occurs, such as chimney covers, roofing tiles blown off, and television antennas damaged. Ground is littered with many small twigs and broken branches',
   },
   {
     lower_border: 24,
     upper_border: 28,
     description:
-      'Air quality is acceptable. However, there may be a risk for some people, particularly those who are unusually sensitive to air pollution',
+      'Whole Gale. Considerable structural damage occurs, especially on roofs. Small trees may be blown over and uprooted',
   },
   {
     lower_border: 28,
     upper_border: 33,
     description:
-      'Air quality is acceptable. However, there may be a risk for some people, particularly those who are unusually sensitive to air pollution',
+      'Storm Force. Widespread damage occurs. Larger trees blown over and uprooted',
   },
   {
     lower_border: 33,
     description:
-      'Air quality is acceptable. However, there may be a risk for some people, particularly those who are unusually sensitive to air pollution',
+      'Hurricane. Severe and extensive damage. Roofs can be peeled off. Windows broken. Trees uprooted. RVs and small mobile homes overturned. Moving automobiles can be pushed off the roadways',
   },
 ];
 
@@ -152,6 +152,7 @@ export const WeatherTypes: {
   '02n': 'Few clouds at the night',
   '03d': 'Scattered clouds',
   '04d': 'Broken clouds',
+  '04n': 'Broken clouds',
   '09d': 'Shower rain',
   '10d': 'Rain at the day time',
   '10n': 'Rain at the night time',

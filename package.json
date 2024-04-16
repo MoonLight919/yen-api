@@ -1,6 +1,6 @@
 {
   "name": "yen-api",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Node.js back-end server",
   "author": "Ihor Andriienko <igorfujitsu@gmail.com>",
   "private": true,
