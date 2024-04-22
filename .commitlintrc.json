@@ -21,7 +21,8 @@
         "ip-geolocation",
         "iqair",
         "alerts-in-ua",
-        "twilio"
+        "twilio",
+        "save-eco-bot"
       ]
     ],
     "type-enum": [

@@ -70,6 +70,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/qs", "npm:6.9.9"],\
             ["@types/sinon", "npm:10.0.20"],\
             ["@types/sinon-chai", "npm:3.2.11"],\
+            ["@types/turf", "npm:3.5.32"],\
             ["@typescript-eslint/eslint-plugin", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:6.9.1"],\
             ["@typescript-eslint/parser", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:6.9.1"],\
             ["@vitest/coverage-istanbul", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:0.34.6"],\
@@ -122,6 +123,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["sinon-chai", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:3.7.0"],\
             ["ts-toolbelt", "npm:9.6.0"],\
             ["tslib", "npm:2.6.2"],\
+            ["turf", "npm:3.0.14"],\
             ["twilio", "npm:4.14.0"],\
             ["typescript", "patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=5da071"],\
             ["unplugin-swc", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:1.4.3"],\
@@ -4731,6 +4733,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@types/geojson", [\
+        ["npm:7946.0.14", {\
+          "packageLocation": "./.yarn/cache/@types-geojson-npm-7946.0.14-cb659a9fdf-ae511bee64.zip/node_modules/@types/geojson/",\
+          "packageDependencies": [\
+            ["@types/geojson", "npm:7946.0.14"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@types/glob", [\
         ["npm:8.1.0", {\
           "packageLocation": "./.yarn/cache/@types-glob-npm-8.1.0-bdb9d0520c-9101f3a906.zip/node_modules/@types/glob/",\
@@ -5066,6 +5077,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-sinonjs__fake-timers-npm-8.1.4-991d44614c-f53fcb5cc6.zip/node_modules/@types/sinonjs__fake-timers/",\
           "packageDependencies": [\
             ["@types/sinonjs__fake-timers", "npm:8.1.4"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/turf", [\
+        ["npm:3.5.32", {\
+          "packageLocation": "./.yarn/cache/@types-turf-npm-3.5.32-4bee638195-cdf479fa88.zip/node_modules/@types/turf/",\
+          "packageDependencies": [\
+            ["@types/turf", "npm:3.5.32"],\
+            ["@types/geojson", "npm:7946.0.14"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -5729,6 +5750,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["affine-hull", [\
+        ["npm:1.0.0", {\
+          "packageLocation": "./.yarn/cache/affine-hull-npm-1.0.0-c9a3fdb4b4-c3387ff19d.zip/node_modules/affine-hull/",\
+          "packageDependencies": [\
+            ["affine-hull", "npm:1.0.0"],\
+            ["robust-orientation", "npm:1.2.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["agent-base", [\
         ["npm:6.0.2", {\
           "packageLocation": "./.yarn/cache/agent-base-npm-6.0.2-428f325a93-f52b6872cc.zip/node_modules/agent-base/",\
@@ -6266,6 +6297,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/binary-extensions-npm-2.2.0-180c33fec7-ccd267956c.zip/node_modules/binary-extensions/",\
           "packageDependencies": [\
             ["binary-extensions", "npm:2.2.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["bit-twiddle", [\
+        ["npm:1.0.2", {\
+          "packageLocation": "./.yarn/cache/bit-twiddle-npm-1.0.2-b0a9a49684-2f97b47d75.zip/node_modules/bit-twiddle/",\
+          "packageDependencies": [\
+            ["bit-twiddle", "npm:1.0.2"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -7078,6 +7118,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["convex-hull", [\
+        ["npm:1.0.3", {\
+          "packageLocation": "./.yarn/cache/convex-hull-npm-1.0.3-efed67ac84-7fadf4e5fd.zip/node_modules/convex-hull/",\
+          "packageDependencies": [\
+            ["convex-hull", "npm:1.0.3"],\
+            ["affine-hull", "npm:1.0.0"],\
+            ["incremental-convex-hull", "npm:1.0.1"],\
+            ["monotone-convex-hull-2d", "npm:1.0.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["cookie", [\
         ["npm:0.5.0", {\
           "packageLocation": "./.yarn/cache/cookie-npm-0.5.0-e2d58a161a-1f4bd2ca57.zip/node_modules/cookie/",\
@@ -7520,6 +7572,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["inherits", "npm:2.0.4"],\
             ["readable-stream", "npm:3.6.2"],\
             ["stream-shift", "npm:1.0.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["earcut", [\
+        ["npm:2.2.4", {\
+          "packageLocation": "./.yarn/cache/earcut-npm-2.2.4-e823546b2f-aea0466cb2.zip/node_modules/earcut/",\
+          "packageDependencies": [\
+            ["earcut", "npm:2.2.4"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -9082,6 +9143,34 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["geojson-area", [\
+        ["npm:0.2.1", {\
+          "packageLocation": "./.yarn/cache/geojson-area-npm-0.2.1-759cd13fcb-a1556a2992.zip/node_modules/geojson-area/",\
+          "packageDependencies": [\
+            ["geojson-area", "npm:0.2.1"],\
+            ["wgs84", "npm:0.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["geojson-normalize", [\
+        ["npm:0.0.0", {\
+          "packageLocation": "./.yarn/cache/geojson-normalize-npm-0.0.0-84472cbc62-747901fea2.zip/node_modules/geojson-normalize/",\
+          "packageDependencies": [\
+            ["geojson-normalize", "npm:0.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["geojson-random", [\
+        ["npm:0.2.2", {\
+          "packageLocation": "./.yarn/cache/geojson-random-npm-0.2.2-c572e30415-3d1e61d2e3.zip/node_modules/geojson-random/",\
+          "packageDependencies": [\
+            ["geojson-random", "npm:0.2.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["get-caller-file", [\
         ["npm:2.0.5", {\
           "packageLocation": "./.yarn/cache/get-caller-file-npm-2.0.5-80e8a86305-b9769a836d.zip/node_modules/get-caller-file/",\
@@ -9765,6 +9854,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/imurmurhash-npm-0.1.4-610c5068a0-7cae75c8cd.zip/node_modules/imurmurhash/",\
           "packageDependencies": [\
             ["imurmurhash", "npm:0.1.4"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["incremental-convex-hull", [\
+        ["npm:1.0.1", {\
+          "packageLocation": "./.yarn/cache/incremental-convex-hull-npm-1.0.1-92c26680e5-dcb7025bca.zip/node_modules/incremental-convex-hull/",\
+          "packageDependencies": [\
+            ["incremental-convex-hull", "npm:1.0.1"],\
+            ["robust-orientation", "npm:1.2.1"],\
+            ["simplicial-complex", "npm:1.0.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -10615,6 +10715,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lodash.once", "npm:4.1.1"],\
             ["ms", "npm:2.1.3"],\
             ["semver", "npm:7.5.4"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["jsts", [\
+        ["npm:1.1.2", {\
+          "packageLocation": "./.yarn/cache/jsts-npm-1.1.2-0758a177fc-f2187de6fc.zip/node_modules/jsts/",\
+          "packageDependencies": [\
+            ["jsts", "npm:1.1.2"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -11693,6 +11802,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["mnemonist", "npm:0.39.5"],\
             ["obliterator", "npm:2.0.4"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["monotone-convex-hull-2d", [\
+        ["npm:1.0.1", {\
+          "packageLocation": "./.yarn/cache/monotone-convex-hull-2d-npm-1.0.1-74b9bb4ce6-2d788534b2.zip/node_modules/monotone-convex-hull-2d/",\
+          "packageDependencies": [\
+            ["monotone-convex-hull-2d", "npm:1.0.1"],\
+            ["robust-orientation", "npm:1.2.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -13659,6 +13778,48 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["robust-orientation", [\
+        ["npm:1.2.1", {\
+          "packageLocation": "./.yarn/cache/robust-orientation-npm-1.2.1-5dd3edd960-83b8730000.zip/node_modules/robust-orientation/",\
+          "packageDependencies": [\
+            ["robust-orientation", "npm:1.2.1"],\
+            ["robust-scale", "npm:1.0.2"],\
+            ["robust-subtract", "npm:1.0.0"],\
+            ["robust-sum", "npm:1.0.0"],\
+            ["two-product", "npm:1.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["robust-scale", [\
+        ["npm:1.0.2", {\
+          "packageLocation": "./.yarn/cache/robust-scale-npm-1.0.2-a49340cb19-4217f15c94.zip/node_modules/robust-scale/",\
+          "packageDependencies": [\
+            ["robust-scale", "npm:1.0.2"],\
+            ["two-product", "npm:1.0.2"],\
+            ["two-sum", "npm:1.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["robust-subtract", [\
+        ["npm:1.0.0", {\
+          "packageLocation": "./.yarn/cache/robust-subtract-npm-1.0.0-4420e35de1-e9dcc39a1a.zip/node_modules/robust-subtract/",\
+          "packageDependencies": [\
+            ["robust-subtract", "npm:1.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["robust-sum", [\
+        ["npm:1.0.0", {\
+          "packageLocation": "./.yarn/cache/robust-sum-npm-1.0.0-763436152a-b9f32829ba.zip/node_modules/robust-sum/",\
+          "packageDependencies": [\
+            ["robust-sum", "npm:1.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["rollup", [\
         ["npm:3.29.4", {\
           "packageLocation": "./.yarn/cache/rollup-npm-3.29.4-5e5e5f2087-8bb20a39c8.zip/node_modules/rollup/",\
@@ -14027,6 +14188,26 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/signal-exit-npm-4.1.0-61fb957687-64c757b498.zip/node_modules/signal-exit/",\
           "packageDependencies": [\
             ["signal-exit", "npm:4.1.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["simplicial-complex", [\
+        ["npm:1.0.0", {\
+          "packageLocation": "./.yarn/cache/simplicial-complex-npm-1.0.0-f10d2c667a-3fb369fe93.zip/node_modules/simplicial-complex/",\
+          "packageDependencies": [\
+            ["simplicial-complex", "npm:1.0.0"],\
+            ["bit-twiddle", "npm:1.0.2"],\
+            ["union-find", "npm:1.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["simplify-js", [\
+        ["npm:1.2.4", {\
+          "packageLocation": "./.yarn/cache/simplify-js-npm-1.2.4-84ed584418-5bbc7b6223.zip/node_modules/simplify-js/",\
+          "packageDependencies": [\
+            ["simplify-js", "npm:1.2.4"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -15069,6 +15250,594 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["turf", [\
+        ["npm:3.0.14", {\
+          "packageLocation": "./.yarn/cache/turf-npm-3.0.14-de6131bc2b-fbf707eee9.zip/node_modules/turf/",\
+          "packageDependencies": [\
+            ["turf", "npm:3.0.14"],\
+            ["turf-along", "npm:3.0.12"],\
+            ["turf-area", "npm:3.0.12"],\
+            ["turf-bbox", "npm:3.0.12"],\
+            ["turf-bbox-polygon", "npm:3.0.12"],\
+            ["turf-bearing", "npm:3.0.12"],\
+            ["turf-bezier", "npm:3.0.12"],\
+            ["turf-buffer", "npm:3.0.12"],\
+            ["turf-center", "npm:3.0.12"],\
+            ["turf-centroid", "npm:3.0.12"],\
+            ["turf-circle", "npm:3.0.12"],\
+            ["turf-collect", "npm:3.0.12"],\
+            ["turf-combine", "npm:3.0.12"],\
+            ["turf-concave", "npm:3.0.12"],\
+            ["turf-convex", "npm:3.0.12"],\
+            ["turf-destination", "npm:3.0.12"],\
+            ["turf-difference", "npm:3.0.12"],\
+            ["turf-distance", "npm:3.0.12"],\
+            ["turf-envelope", "npm:3.0.12"],\
+            ["turf-explode", "npm:3.0.12"],\
+            ["turf-flip", "npm:3.0.12"],\
+            ["turf-helpers", "npm:3.0.12"],\
+            ["turf-hex-grid", "npm:3.0.12"],\
+            ["turf-inside", "npm:3.0.12"],\
+            ["turf-intersect", "npm:3.0.12"],\
+            ["turf-isolines", "npm:3.0.12"],\
+            ["turf-kinks", "npm:3.0.12"],\
+            ["turf-line-distance", "npm:3.0.12"],\
+            ["turf-line-slice", "npm:3.0.12"],\
+            ["turf-meta", "npm:3.0.12"],\
+            ["turf-midpoint", "npm:3.0.12"],\
+            ["turf-nearest", "npm:3.0.12"],\
+            ["turf-planepoint", "npm:3.0.12"],\
+            ["turf-point-grid", "npm:3.0.12"],\
+            ["turf-point-on-line", "npm:3.0.12"],\
+            ["turf-point-on-surface", "npm:3.0.12"],\
+            ["turf-random", "npm:3.0.12"],\
+            ["turf-sample", "npm:3.0.12"],\
+            ["turf-simplify", "npm:3.0.12"],\
+            ["turf-square", "npm:3.0.12"],\
+            ["turf-square-grid", "npm:3.0.12"],\
+            ["turf-tag", "npm:3.0.12"],\
+            ["turf-tesselate", "npm:3.0.12"],\
+            ["turf-tin", "npm:3.0.12"],\
+            ["turf-triangle-grid", "npm:3.0.12"],\
+            ["turf-union", "npm:3.0.12"],\
+            ["turf-within", "npm:3.0.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-along", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-along-npm-3.0.12-85ad5a9042-2ad8d4ad58.zip/node_modules/turf-along/",\
+          "packageDependencies": [\
+            ["turf-along", "npm:3.0.12"],\
+            ["turf-bearing", "npm:3.0.12"],\
+            ["turf-destination", "npm:3.0.12"],\
+            ["turf-distance", "npm:3.0.12"],\
+            ["turf-helpers", "npm:3.0.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-area", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-area-npm-3.0.12-97c5ad32f0-35d2ba7ca3.zip/node_modules/turf-area/",\
+          "packageDependencies": [\
+            ["turf-area", "npm:3.0.12"],\
+            ["geojson-area", "npm:0.2.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-bbox", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-bbox-npm-3.0.12-6448ab0518-b5c6c38106.zip/node_modules/turf-bbox/",\
+          "packageDependencies": [\
+            ["turf-bbox", "npm:3.0.12"],\
+            ["turf-meta", "npm:3.0.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-bbox-polygon", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-bbox-polygon-npm-3.0.12-74f1c72db0-3fc97a1ee5.zip/node_modules/turf-bbox-polygon/",\
+          "packageDependencies": [\
+            ["turf-bbox-polygon", "npm:3.0.12"],\
+            ["turf-helpers", "npm:3.0.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-bearing", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-bearing-npm-3.0.12-27e8528563-7a48ffc1e3.zip/node_modules/turf-bearing/",\
+          "packageDependencies": [\
+            ["turf-bearing", "npm:3.0.12"],\
+            ["turf-invariant", "npm:3.0.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-bezier", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-bezier-npm-3.0.12-7e862e7bd3-b861d62f04.zip/node_modules/turf-bezier/",\
+          "packageDependencies": [\
+            ["turf-bezier", "npm:3.0.12"],\
+            ["turf-helpers", "npm:3.0.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-buffer", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-buffer-npm-3.0.12-1b6f916d4d-23174032eb.zip/node_modules/turf-buffer/",\
+          "packageDependencies": [\
+            ["turf-buffer", "npm:3.0.12"],\
+            ["geojson-normalize", "npm:0.0.0"],\
+            ["jsts", "npm:1.1.2"],\
+            ["turf-combine", "npm:3.0.12"],\
+            ["turf-helpers", "npm:3.0.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-center", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-center-npm-3.0.12-8a1fab4be4-88ec732ce5.zip/node_modules/turf-center/",\
+          "packageDependencies": [\
+            ["turf-center", "npm:3.0.12"],\
+            ["turf-bbox", "npm:3.0.12"],\
+            ["turf-helpers", "npm:3.0.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-centroid", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-centroid-npm-3.0.12-ff8a4770ac-75aea23b13.zip/node_modules/turf-centroid/",\
+          "packageDependencies": [\
+            ["turf-centroid", "npm:3.0.12"],\
+            ["turf-helpers", "npm:3.0.12"],\
+            ["turf-meta", "npm:3.0.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-circle", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-circle-npm-3.0.12-46e6e49b55-c5085f4be9.zip/node_modules/turf-circle/",\
+          "packageDependencies": [\
+            ["turf-circle", "npm:3.0.12"],\
+            ["turf-destination", "npm:3.0.12"],\
+            ["turf-helpers", "npm:3.0.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-collect", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-collect-npm-3.0.12-c5ef27c9cc-f128f34d7f.zip/node_modules/turf-collect/",\
+          "packageDependencies": [\
+            ["turf-collect", "npm:3.0.12"],\
+            ["turf-inside", "npm:3.0.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-combine", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-combine-npm-3.0.12-5e3a063c82-dc7005b0be.zip/node_modules/turf-combine/",\
+          "packageDependencies": [\
+            ["turf-combine", "npm:3.0.12"],\
+            ["turf-meta", "npm:3.0.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-concave", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-concave-npm-3.0.12-3c20703621-12bc2f1392.zip/node_modules/turf-concave/",\
+          "packageDependencies": [\
+            ["turf-concave", "npm:3.0.12"],\
+            ["turf-distance", "npm:3.0.12"],\
+            ["turf-meta", "npm:3.0.12"],\
+            ["turf-tin", "npm:3.0.12"],\
+            ["turf-union", "npm:3.0.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-convex", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-convex-npm-3.0.12-c8cb3ce8fb-3c17f4438d.zip/node_modules/turf-convex/",\
+          "packageDependencies": [\
+            ["turf-convex", "npm:3.0.12"],\
+            ["convex-hull", "npm:1.0.3"],\
+            ["turf-helpers", "npm:3.0.12"],\
+            ["turf-meta", "npm:3.0.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-destination", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-destination-npm-3.0.12-144111e41c-ef92e99345.zip/node_modules/turf-destination/",\
+          "packageDependencies": [\
+            ["turf-destination", "npm:3.0.12"],\
+            ["turf-helpers", "npm:3.0.12"],\
+            ["turf-invariant", "npm:3.0.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-difference", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-difference-npm-3.0.12-4ef3014757-da873d7aad.zip/node_modules/turf-difference/",\
+          "packageDependencies": [\
+            ["turf-difference", "npm:3.0.12"],\
+            ["jsts", "npm:1.1.2"],\
+            ["turf-helpers", "npm:3.0.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-distance", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-distance-npm-3.0.12-3a0cfbaa73-ff1cd20733.zip/node_modules/turf-distance/",\
+          "packageDependencies": [\
+            ["turf-distance", "npm:3.0.12"],\
+            ["turf-helpers", "npm:3.0.12"],\
+            ["turf-invariant", "npm:3.0.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-envelope", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-envelope-npm-3.0.12-1f6a7cce59-7ddf51102b.zip/node_modules/turf-envelope/",\
+          "packageDependencies": [\
+            ["turf-envelope", "npm:3.0.12"],\
+            ["turf-bbox", "npm:3.0.12"],\
+            ["turf-bbox-polygon", "npm:3.0.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-explode", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-explode-npm-3.0.12-d4385f3c3d-82e51bc03b.zip/node_modules/turf-explode/",\
+          "packageDependencies": [\
+            ["turf-explode", "npm:3.0.12"],\
+            ["turf-helpers", "npm:3.0.12"],\
+            ["turf-meta", "npm:3.0.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-flip", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-flip-npm-3.0.12-735faa941b-c41b1b0810.zip/node_modules/turf-flip/",\
+          "packageDependencies": [\
+            ["turf-flip", "npm:3.0.12"],\
+            ["turf-meta", "npm:3.0.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-grid", [\
+        ["npm:1.0.1", {\
+          "packageLocation": "./.yarn/cache/turf-grid-npm-1.0.1-425c360a8a-a7a6a83133.zip/node_modules/turf-grid/",\
+          "packageDependencies": [\
+            ["turf-grid", "npm:1.0.1"],\
+            ["turf-point", "npm:2.0.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-helpers", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-helpers-npm-3.0.12-c931bd4ad6-8a9f91f85d.zip/node_modules/turf-helpers/",\
+          "packageDependencies": [\
+            ["turf-helpers", "npm:3.0.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-hex-grid", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-hex-grid-npm-3.0.12-b93dafb23b-b7a404923d.zip/node_modules/turf-hex-grid/",\
+          "packageDependencies": [\
+            ["turf-hex-grid", "npm:3.0.12"],\
+            ["turf-distance", "npm:3.0.12"],\
+            ["turf-helpers", "npm:3.0.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-inside", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-inside-npm-3.0.12-e555e6e281-3336aad3b4.zip/node_modules/turf-inside/",\
+          "packageDependencies": [\
+            ["turf-inside", "npm:3.0.12"],\
+            ["turf-invariant", "npm:3.0.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-intersect", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-intersect-npm-3.0.12-ec8ff71953-1195c40927.zip/node_modules/turf-intersect/",\
+          "packageDependencies": [\
+            ["turf-intersect", "npm:3.0.12"],\
+            ["jsts", "npm:1.1.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-invariant", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-invariant-npm-3.0.12-99983d938d-40c806e6a7.zip/node_modules/turf-invariant/",\
+          "packageDependencies": [\
+            ["turf-invariant", "npm:3.0.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-isolines", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-isolines-npm-3.0.12-910c86dc09-7b7e4766f1.zip/node_modules/turf-isolines/",\
+          "packageDependencies": [\
+            ["turf-isolines", "npm:3.0.12"],\
+            ["turf-bbox", "npm:3.0.12"],\
+            ["turf-grid", "npm:1.0.1"],\
+            ["turf-helpers", "npm:3.0.12"],\
+            ["turf-inside", "npm:3.0.12"],\
+            ["turf-planepoint", "npm:3.0.12"],\
+            ["turf-square", "npm:3.0.12"],\
+            ["turf-tin", "npm:3.0.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-kinks", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-kinks-npm-3.0.12-893ca885ff-48bf0549f0.zip/node_modules/turf-kinks/",\
+          "packageDependencies": [\
+            ["turf-kinks", "npm:3.0.12"],\
+            ["turf-helpers", "npm:3.0.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-line-distance", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-line-distance-npm-3.0.12-dd98f6c463-bb8780c882.zip/node_modules/turf-line-distance/",\
+          "packageDependencies": [\
+            ["turf-line-distance", "npm:3.0.12"],\
+            ["turf-distance", "npm:3.0.12"],\
+            ["turf-helpers", "npm:3.0.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-line-slice", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-line-slice-npm-3.0.12-ffb497c661-a18edad571.zip/node_modules/turf-line-slice/",\
+          "packageDependencies": [\
+            ["turf-line-slice", "npm:3.0.12"],\
+            ["turf-bearing", "npm:3.0.12"],\
+            ["turf-destination", "npm:3.0.12"],\
+            ["turf-distance", "npm:3.0.12"],\
+            ["turf-helpers", "npm:3.0.12"],\
+            ["turf-point-on-line", "npm:3.0.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-meta", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-meta-npm-3.0.12-0ab9caf35e-7d315eabd6.zip/node_modules/turf-meta/",\
+          "packageDependencies": [\
+            ["turf-meta", "npm:3.0.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-midpoint", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-midpoint-npm-3.0.12-a42848346f-2e8360aabf.zip/node_modules/turf-midpoint/",\
+          "packageDependencies": [\
+            ["turf-midpoint", "npm:3.0.12"],\
+            ["turf-bearing", "npm:3.0.12"],\
+            ["turf-destination", "npm:3.0.12"],\
+            ["turf-distance", "npm:3.0.12"],\
+            ["turf-invariant", "npm:3.0.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-nearest", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-nearest-npm-3.0.12-e796b902fe-a7b1423adc.zip/node_modules/turf-nearest/",\
+          "packageDependencies": [\
+            ["turf-nearest", "npm:3.0.12"],\
+            ["turf-distance", "npm:3.0.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-planepoint", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-planepoint-npm-3.0.12-6559f755bb-4a52409f23.zip/node_modules/turf-planepoint/",\
+          "packageDependencies": [\
+            ["turf-planepoint", "npm:3.0.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-point", [\
+        ["npm:2.0.1", {\
+          "packageLocation": "./.yarn/cache/turf-point-npm-2.0.1-91c5b09b77-55b491e288.zip/node_modules/turf-point/",\
+          "packageDependencies": [\
+            ["turf-point", "npm:2.0.1"],\
+            ["minimist", "npm:1.2.8"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-point-grid", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-point-grid-npm-3.0.12-fd59c95a09-951a23402a.zip/node_modules/turf-point-grid/",\
+          "packageDependencies": [\
+            ["turf-point-grid", "npm:3.0.12"],\
+            ["turf-distance", "npm:3.0.12"],\
+            ["turf-helpers", "npm:3.0.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-point-on-line", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-point-on-line-npm-3.0.12-0d6597a42f-798e125f61.zip/node_modules/turf-point-on-line/",\
+          "packageDependencies": [\
+            ["turf-point-on-line", "npm:3.0.12"],\
+            ["turf-bearing", "npm:3.0.12"],\
+            ["turf-destination", "npm:3.0.12"],\
+            ["turf-distance", "npm:3.0.12"],\
+            ["turf-helpers", "npm:3.0.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-point-on-surface", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-point-on-surface-npm-3.0.12-ccda655989-040df34e51.zip/node_modules/turf-point-on-surface/",\
+          "packageDependencies": [\
+            ["turf-point-on-surface", "npm:3.0.12"],\
+            ["turf-center", "npm:3.0.12"],\
+            ["turf-distance", "npm:3.0.12"],\
+            ["turf-explode", "npm:3.0.12"],\
+            ["turf-helpers", "npm:3.0.12"],\
+            ["turf-inside", "npm:3.0.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-random", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-random-npm-3.0.12-085e286dd8-7621231d22.zip/node_modules/turf-random/",\
+          "packageDependencies": [\
+            ["turf-random", "npm:3.0.12"],\
+            ["geojson-random", "npm:0.2.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-sample", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-sample-npm-3.0.12-12ed9d346e-fd5cba7419.zip/node_modules/turf-sample/",\
+          "packageDependencies": [\
+            ["turf-sample", "npm:3.0.12"],\
+            ["turf-helpers", "npm:3.0.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-simplify", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-simplify-npm-3.0.12-48e95f8287-75b3e00d2e.zip/node_modules/turf-simplify/",\
+          "packageDependencies": [\
+            ["turf-simplify", "npm:3.0.12"],\
+            ["simplify-js", "npm:1.2.4"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-square", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-square-npm-3.0.12-b06bd72388-50eb0d13ed.zip/node_modules/turf-square/",\
+          "packageDependencies": [\
+            ["turf-square", "npm:3.0.12"],\
+            ["turf-distance", "npm:3.0.12"],\
+            ["turf-helpers", "npm:3.0.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-square-grid", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-square-grid-npm-3.0.12-c3e0da8179-127d9dae96.zip/node_modules/turf-square-grid/",\
+          "packageDependencies": [\
+            ["turf-square-grid", "npm:3.0.12"],\
+            ["turf-distance", "npm:3.0.12"],\
+            ["turf-helpers", "npm:3.0.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-tag", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-tag-npm-3.0.12-f378e26964-5d007ebc72.zip/node_modules/turf-tag/",\
+          "packageDependencies": [\
+            ["turf-tag", "npm:3.0.12"],\
+            ["turf-inside", "npm:3.0.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-tesselate", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-tesselate-npm-3.0.12-1f9941fea8-caf3386add.zip/node_modules/turf-tesselate/",\
+          "packageDependencies": [\
+            ["turf-tesselate", "npm:3.0.12"],\
+            ["earcut", "npm:2.2.4"],\
+            ["turf-helpers", "npm:3.0.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-tin", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-tin-npm-3.0.12-ee4a5a6643-d576535136.zip/node_modules/turf-tin/",\
+          "packageDependencies": [\
+            ["turf-tin", "npm:3.0.12"],\
+            ["turf-helpers", "npm:3.0.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-triangle-grid", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-triangle-grid-npm-3.0.12-567414063c-0e76b872a1.zip/node_modules/turf-triangle-grid/",\
+          "packageDependencies": [\
+            ["turf-triangle-grid", "npm:3.0.12"],\
+            ["turf-distance", "npm:3.0.12"],\
+            ["turf-helpers", "npm:3.0.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-union", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-union-npm-3.0.12-d1b217387c-019ef23740.zip/node_modules/turf-union/",\
+          "packageDependencies": [\
+            ["turf-union", "npm:3.0.12"],\
+            ["jsts", "npm:1.1.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["turf-within", [\
+        ["npm:3.0.12", {\
+          "packageLocation": "./.yarn/cache/turf-within-npm-3.0.12-b545fa7d20-6e8db48fcf.zip/node_modules/turf-within/",\
+          "packageDependencies": [\
+            ["turf-within", "npm:3.0.12"],\
+            ["turf-helpers", "npm:3.0.12"],\
+            ["turf-inside", "npm:3.0.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["twilio", [\
         ["npm:4.14.0", {\
           "packageLocation": "./.yarn/cache/twilio-npm-4.14.0-4cdf92966c-23d68989e7.zip/node_modules/twilio/",\
@@ -15082,6 +15851,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["scmp", "npm:2.1.0"],\
             ["url-parse", "npm:1.5.10"],\
             ["xmlbuilder", "npm:13.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["two-product", [\
+        ["npm:1.0.2", {\
+          "packageLocation": "./.yarn/cache/two-product-npm-1.0.2-5f3b7dbdd1-b289814957.zip/node_modules/two-product/",\
+          "packageDependencies": [\
+            ["two-product", "npm:1.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["two-sum", [\
+        ["npm:1.0.0", {\
+          "packageLocation": "./.yarn/cache/two-sum-npm-1.0.0-217dea46a7-2c6a995b55.zip/node_modules/two-sum/",\
+          "packageDependencies": [\
+            ["two-sum", "npm:1.0.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -15298,6 +16085,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/undici-types-npm-5.26.5-de4f7c7bb9-3192ef6f3f.zip/node_modules/undici-types/",\
           "packageDependencies": [\
             ["undici-types", "npm:5.26.5"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["union-find", [\
+        ["npm:1.0.2", {\
+          "packageLocation": "./.yarn/cache/union-find-npm-1.0.2-5ed60e74a3-5391236828.zip/node_modules/union-find/",\
+          "packageDependencies": [\
+            ["union-find", "npm:1.0.2"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -15819,6 +16615,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["wgs84", [\
+        ["npm:0.0.0", {\
+          "packageLocation": "./.yarn/cache/wgs84-npm-0.0.0-364d052ae6-07d15bee82.zip/node_modules/wgs84/",\
+          "packageDependencies": [\
+            ["wgs84", "npm:0.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["whatwg-url", [\
         ["npm:5.0.0", {\
           "packageLocation": "./.yarn/cache/whatwg-url-npm-5.0.0-374fb45e60-b8daed4ad3.zip/node_modules/whatwg-url/",\
@@ -16168,6 +16973,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/qs", "npm:6.9.9"],\
             ["@types/sinon", "npm:10.0.20"],\
             ["@types/sinon-chai", "npm:3.2.11"],\
+            ["@types/turf", "npm:3.5.32"],\
             ["@typescript-eslint/eslint-plugin", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:6.9.1"],\
             ["@typescript-eslint/parser", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:6.9.1"],\
             ["@vitest/coverage-istanbul", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:0.34.6"],\
@@ -16220,6 +17026,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["sinon-chai", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:3.7.0"],\
             ["ts-toolbelt", "npm:9.6.0"],\
             ["tslib", "npm:2.6.2"],\
+            ["turf", "npm:3.0.14"],\
             ["twilio", "npm:4.14.0"],\
             ["typescript", "patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=5da071"],\
             ["unplugin-swc", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:1.4.3"],\

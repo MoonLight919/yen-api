@@ -15,6 +15,7 @@ import { AlertsInUaModule } from '@resources/alerts-in-ua/alerts-in-ua.module';
 import { AuthModule } from './auth/auth.module';
 import { UserModule } from './user/user.module';
 import { TwilioModule } from './twilio/twilio.module';
+import { SaveEcoBotModule } from './save-eco-bot/save-eco-bot.module';
 
 @Module({
   imports: [
@@ -43,6 +44,7 @@ import { TwilioModule } from './twilio/twilio.module';
     IqAirModule,
     AlertsInUaModule,
     TwilioModule,
+    SaveEcoBotModule,
   ],
 })
 export class AppModule {}
