@@ -1,6 +1,6 @@
-import { type IqAirValueDescription } from '@resources/iqair/contracts';
+import { type MetricValueDescription } from '@lib/interfaces';
 
-export const WindDirectionDescriptions: IqAirValueDescription[] = [
+export const WindDirectionDescriptions: MetricValueDescription[] = [
   {
     lower_border: 0,
     upper_border: 45,
@@ -28,7 +28,7 @@ export const WindDirectionDescriptions: IqAirValueDescription[] = [
   },
 ];
 
-export const WindSpeedDescriptions: IqAirValueDescription[] = [
+export const WindSpeedDescriptions: MetricValueDescription[] = [
   {
     upper_border: 0,
     description: 'Calm wind. Smoke rises vertically with little if any drift',
@@ -106,7 +106,7 @@ export const WindSpeedDescriptions: IqAirValueDescription[] = [
   },
 ];
 
-export const AirQualityDescriptions: IqAirValueDescription[] = [
+export const AirQualityDescriptions: MetricValueDescription[] = [
   {
     upper_border: 50,
     description:

@@ -1,11 +1,5 @@
 import { Type, type Static } from '@sinclair/typebox';
 
-export interface IqAirValueDescription {
-  lower_border?: number;
-  upper_border?: number;
-  description: string;
-}
-
 export const iqAirDtoSchema = Type.Object(
   {
     city: Type.String(),

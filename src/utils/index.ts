@@ -28,6 +28,7 @@ export * from './pick';
 export * from './prop';
 export * from './read-package-json';
 export * from './reflect';
+export * from './retrieve-metric-description';
 export * from './sanitaze-filter-options';
 export * from './size-unit';
 export * from './slugify';

@@ -1,6 +1,6 @@
 {
   "name": "yen-api",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "Node.js back-end server",
   "author": "Ihor Andriienko <igorfujitsu@gmail.com>",
   "private": true,
@@ -76,6 +76,7 @@
     "rxjs": "7.8.1",
     "ts-toolbelt": "9.6.0",
     "tslib": "2.6.2",
+    "turf": "3.0.14",
     "twilio": "4.14.0"
   },
   "devDependencies": {
@@ -98,6 +99,7 @@
     "@types/qs": "6.9.9",
     "@types/sinon": "10.0.20",
     "@types/sinon-chai": "3.2.11",
+    "@types/turf": "3.5.32",
     "@typescript-eslint/eslint-plugin": "6.9.1",
     "@typescript-eslint/parser": "6.9.1",
     "@vitest/coverage-istanbul": "0.34.6",

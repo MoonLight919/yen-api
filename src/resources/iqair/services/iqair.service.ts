@@ -4,14 +4,15 @@ import { ConfigType } from '@nestjs/config';
 import { iqAirConfig as iqac } from '@config/iqair.config';
 import { type UserRecord } from '@resources/user/interfaces';
 import { TwilioService } from '@resources/twilio/services';
+import { retrieveDescription } from '@utils';
 import {
   AirQualityDescriptions,
   MainPollutants,
   WeatherTypes,
   WindDirectionDescriptions,
   WindSpeedDescriptions,
-} from '@resources/iqair/iqair.constants';
-import { type IqAirDto, type IqAirValueDescription } from '../contracts';
+} from '../iqair.constants';
+import { type IqAirDto } from '../contracts';
 
 @Injectable()
 export class IqAirService {
@@ -38,11 +39,11 @@ export class IqAirService {
     const windSpeed = data.weather.wind_speed;
     const windDirection = data.weather.wind_direction;
 
-    const speedDescription = this.retrieveDescription(
+    const speedDescription = retrieveDescription(
       WindSpeedDescriptions,
       windSpeed,
     );
-    const directionDescription = this.retrieveDescription(
+    const directionDescription = retrieveDescription(
       WindDirectionDescriptions,
       windDirection,
     );
@@ -92,10 +93,7 @@ export class IqAirService {
     const data = await this.retrieveForUser(user);
     const airQuality = data.pollution.aqi_value;
 
-    const description = this.retrieveDescription(
-      AirQualityDescriptions,
-      airQuality,
-    );
+    const description = retrieveDescription(AirQualityDescriptions, airQuality);
 
     return await this.twilioService.notify(
       user.phone_number,
@@ -105,20 +103,6 @@ export class IqAirService {
           MainPollutants[data.pollution.main_pollutant]
         }`,
     );
-  }
-
-  private retrieveDescription(
-    collection: IqAirValueDescription[],
-    value: number,
-  ): string | undefined {
-    return collection.find((description) => {
-      return (
-        (description.lower_border === undefined ||
-          value >= description.lower_border) &&
-        (description.upper_border === undefined ||
-          value <= description.upper_border)
-      );
-    })?.description;
   }
 
   private async retrieveForUser(user: UserRecord): Promise<IqAirDto> {

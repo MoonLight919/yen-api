@@ -8,6 +8,7 @@ import { ipGeolocationConfig } from '@config/ip-geolocation.config';
 import { iqAirConfig } from '@config/iqair.config';
 import { alertsInUaConfig } from '@config/alerts-in-ua.config';
 import { twilioConfig } from '@config/twilio.config';
+import { saveEcoBotConfig } from '@config/save-eco-bot.config';
 
 @Module({
   imports: [
@@ -23,6 +24,7 @@ import { twilioConfig } from '@config/twilio.config';
         iqAirConfig,
         alertsInUaConfig,
         twilioConfig,
+        saveEcoBotConfig,
       ],
     }),
   ],
