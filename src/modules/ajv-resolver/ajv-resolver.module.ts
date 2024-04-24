@@ -21,6 +21,7 @@ import {
 } from '@resources/user/schemas';
 import { ipGeolocationDtoSchema } from '@resources/ip-geolocation/contracts';
 import { iqAirDtoSchema } from '@resources/iqair/contracts';
+import { notificationDetailsDtoSchema } from '@resources/notifications/contracts';
 
 export const componentSchemas = [
   idSchema,
@@ -36,6 +37,7 @@ export const componentSchemas = [
   patchUserRequestBodyDtoSchema,
   ipGeolocationDtoSchema,
   iqAirDtoSchema,
+  notificationDetailsDtoSchema,
 ];
 
 @Module({})

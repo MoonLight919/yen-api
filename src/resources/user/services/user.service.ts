@@ -40,9 +40,6 @@ export class UserService {
             current_longitude: null,
             current_country: null,
             current_latitude: null,
-            default_location_for_radiation_level_notifications: true,
-            default_location_for_alerts_in_ua_notifications: true,
-            default_location_for_air_quality_and_weather_notifications: true,
           },
           {
             intercept: options?.intercept,

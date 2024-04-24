@@ -20,7 +20,7 @@ variable "password" {
 
 variable "database" {
   type = string
-  default = "main"
+  default = "test_integration"
 }
 
 env "yen" {

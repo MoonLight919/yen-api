@@ -14,9 +14,6 @@ export interface UserRecord extends ResourceObject {
   current_latitude: Nullable<number>;
   current_longitude: Nullable<number>;
   current_region: Nullable<string>;
-  default_location_for_alerts_in_ua_notifications: boolean;
-  default_location_for_air_quality_and_weather_notifications: boolean;
-  default_location_for_radiation_level_notifications: boolean;
 }
 
 export interface IUserRecordResource extends ResourceObject {
