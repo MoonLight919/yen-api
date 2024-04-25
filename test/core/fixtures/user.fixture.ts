@@ -21,8 +21,5 @@ export const getRandomUser = (
   current_latitude: faker.location.latitude(),
   current_longitude: faker.location.longitude(),
   current_region: faker.location.state(),
-  default_location_for_alerts_in_ua_notifications: true,
-  default_location_for_air_quality_and_weather_notifications: true,
-  default_location_for_radiation_level_notifications: true,
   ...userOverride,
 });

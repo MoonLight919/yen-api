@@ -21,9 +21,10 @@ export class AlertsInUaService {
 
   public async notifyByUser(user: UserRecord): Promise<void> {
     const alerts = await this.retrieve();
-    const region = user.default_location_for_alerts_in_ua_notifications
+    /*const region = user.default_location_for_alerts_in_ua_notifications
       ? user.default_region
-      : user.current_region;
+      : user.current_region;*/
+    const region = user.default_region;
 
     let messageBody: string;
 

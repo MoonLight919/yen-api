@@ -22,7 +22,8 @@
         "iqair",
         "alerts-in-ua",
         "twilio",
-        "save-eco-bot"
+        "save-eco-bot",
+        "notifications"
       ]
     ],
     "type-enum": [

@@ -12,6 +12,7 @@ import { AjvResolverModule } from '@modules/ajv-resolver';
 import { IpGeolocationModule } from '@resources/ip-geolocation/ip-geolocation.module';
 import { IqAirModule } from '@resources/iqair/iqair.module';
 import { AlertsInUaModule } from '@resources/alerts-in-ua/alerts-in-ua.module';
+import { NotificationsModule } from '@resources/notifications/notifications.module';
 import { AuthModule } from './auth/auth.module';
 import { UserModule } from './user/user.module';
 import { TwilioModule } from './twilio/twilio.module';
@@ -45,6 +46,7 @@ import { SaveEcoBotModule } from './save-eco-bot/save-eco-bot.module';
     AlertsInUaModule,
     TwilioModule,
     SaveEcoBotModule,
+    NotificationsModule,
   ],
 })
 export class AppModule {}

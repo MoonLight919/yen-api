@@ -15,9 +15,6 @@ export const userDtoSchema = extendResourceObject(
     current_latitude: nullable(Type.Number()),
     current_longitude: nullable(Type.Number()),
     current_region: nullable(Type.String()),
-    default_location_for_alerts_in_ua_notifications: Type.Boolean(),
-    default_location_for_air_quality_and_weather_notifications: Type.Boolean(),
-    default_location_for_radiation_level_notifications: Type.Boolean(),
   }),
   { $id: 'User' },
 );
