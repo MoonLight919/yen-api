@@ -2,10 +2,9 @@ import { Inject, Injectable } from '@nestjs/common';
 import { HttpService } from '@nestjs/axios';
 import { ConfigType } from '@nestjs/config';
 import { saveEcoBotConfig as sebc } from '@config/save-eco-bot.config';
-import { getNearestCoordinates } from '@resources/save-eco-bot/utils/get-nearest-coordinates';
 import { type UserRecord } from '@resources/user/interfaces';
 import { TwilioService } from '@resources/twilio/services';
-import { RadiationLevelDescriptions } from '@resources/save-eco-bot/save-eco-bot.constants';
+import { type NotificationDetailsRecord } from '@resources/notifications/contracts';
 import { retrieveDescription } from '@utils';
 import {
   type RadiationDataDto,
@@ -14,6 +13,8 @@ import {
   type SensorsData,
   type SensorsDetails,
 } from '../contracts';
+import { RadiationLevelDescriptions } from '../save-eco-bot.constants';
+import { getNearestCoordinates } from '../utils/get-nearest-coordinates';
 
 @Injectable()
 export class SaveEcoBotService {
@@ -23,6 +24,51 @@ export class SaveEcoBotService {
     private readonly saveEcoBotConfig: ConfigType<typeof sebc>,
     private readonly twilioService: TwilioService,
   ) {}
+
+  public async alertAboutRadiation(
+    notificationDetail: NotificationDetailsRecord,
+    apiData: RadiationInformationDto,
+    phoneNumber: string,
+  ): Promise<boolean> {
+    const lowerBorderExceeded =
+      notificationDetail.lower_border_active &&
+      notificationDetail.lower_border &&
+      notificationDetail.lower_border >= apiData.gamma_nsv_h;
+
+    const upperBorderExceeded =
+      notificationDetail.upper_border_active &&
+      notificationDetail.upper_border &&
+      notificationDetail.upper_border <= apiData.gamma_nsv_h;
+
+    if (lowerBorderExceeded || upperBorderExceeded) {
+      if (notificationDetail.alert_in_progress) {
+        return false;
+      }
+
+      const gammaLevel = apiData.gamma_nsv_h;
+      const gammaLevelDescription = retrieveDescription(
+        RadiationLevelDescriptions,
+        gammaLevel,
+      );
+
+      const messageBody =
+        `Current radiation state\n\n` +
+        `Gamma level: ${gammaLevel} nSv/h - ${gammaLevelDescription}\n` +
+        `Sensor address: ${apiData.sensor_name}, ${apiData.region_name}, ` +
+        `${apiData.city_name}\n` +
+        `Sensor owner: ${apiData.platform_name}` +
+        (apiData.notes ? `\n${apiData.notes}` : '');
+
+      await this.twilioService.notify(
+        phoneNumber,
+        `Attention! Radiation alert from Yenebezpeka!\n` + messageBody,
+      );
+
+      return true;
+    }
+
+    return false;
+  }
 
   public async notifyByUser(user: UserRecord): Promise<void> {
     const radiationInformation = await this.retrieveForUser(user);
@@ -139,7 +185,7 @@ export class SaveEcoBotService {
     }));
   }
 
-  private async retrieveForUser(
+  public async retrieveForUser(
     user: UserRecord,
   ): Promise<RadiationInformationDto> {
     const latitude = user.current_latitude ?? user.default_latitude;

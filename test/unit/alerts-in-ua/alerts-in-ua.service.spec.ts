@@ -14,9 +14,9 @@ import { type UserRecord } from '@resources/user/interfaces';
 import { AlertsInUaModule } from '@resources/alerts-in-ua/alerts-in-ua.module';
 import { AlertsInUaService } from '@resources/alerts-in-ua/services';
 import { TwilioService } from '@resources/twilio/services';
-import { buildApplication } from '../core/lib/application';
-import { insertRandomUserWithAuth0Sub } from '../core/seeds';
-import { clearAll } from '../core/lib/database/repositories';
+import { buildApplication } from '../../core/lib/application';
+import { insertRandomUserWithAuth0Sub } from '../../core/seeds';
+import { clearAll } from '../../core/lib/database/repositories';
 
 describe('AlertsInUaService', () => {
   let testUser: UserRecord;
