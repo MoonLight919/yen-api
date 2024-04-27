@@ -48,7 +48,11 @@ export class NotificationDetailsService {
     return this.notificationDetailsRepository.create(
       {
         ...payload,
+        upper_border: payload.upper_border ?? null,
+        lower_border: payload.lower_border ?? null,
         trigger_value: payload.trigger_value ?? null,
+        upper_border_active: payload.upper_border_active ?? false,
+        lower_border_active: payload.lower_border_active ?? false,
         default_location: payload.default_location ?? true,
         active: payload.active ?? false,
         alert_in_progress: false,
