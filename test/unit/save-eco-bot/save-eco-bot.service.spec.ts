@@ -13,9 +13,9 @@ import { type NestFastifyApplication } from '@nestjs/platform-fastify';
 import { type UserRecord } from '@resources/user/interfaces';
 import { SaveEcoBotService } from '@resources/save-eco-bot/services';
 import { SaveEcoBotModule } from '@resources/save-eco-bot/save-eco-bot.module';
-import { buildApplication } from '../core/lib/application';
-import { insertRandomUserWithAuth0Sub } from '../core/seeds';
-import { clearAll } from '../core/lib/database/repositories';
+import { buildApplication } from '../../core/lib/application';
+import { insertRandomUserWithAuth0Sub } from '../../core/seeds';
+import { clearAll } from '../../core/lib/database/repositories';
 describe('SaveEcoBotService', () => {
   let testUser: UserRecord;
   let app: NestFastifyApplication;

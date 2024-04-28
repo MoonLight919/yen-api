@@ -18,9 +18,9 @@ import {
   AirQualityDescriptions,
   WindSpeedDescriptions,
 } from '@resources/iqair/iqair.constants';
-import { buildApplication } from '../core/lib/application';
-import { insertRandomUserWithAuth0Sub } from '../core/seeds';
-import { clearAll } from '../core/lib/database/repositories';
+import { buildApplication } from '../../core/lib/application';
+import { insertRandomUserWithAuth0Sub } from '../../core/seeds';
+import { clearAll } from '../../core/lib/database/repositories';
 
 describe('IqAirService', () => {
   let testUser: UserRecord;

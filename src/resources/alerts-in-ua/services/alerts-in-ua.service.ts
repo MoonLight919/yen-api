@@ -19,12 +19,39 @@ export class AlertsInUaService {
     private readonly twilioService: TwilioService,
   ) {}
 
+  public async alertByUser(
+    alerts: AlertsInUaDto[],
+    region: string | null,
+    phoneNumber: string,
+    alertInProgress: boolean,
+  ): Promise<boolean> {
+    let messageBody: string;
+
+    if (!region) {
+      return false;
+    } else {
+      const convertedRegion = UkraineRegionNamesUId[region];
+      const alertInRegion = alerts.filter(
+        (alert) => alert.region === convertedRegion,
+      );
+
+      if (alertInRegion.length === 0) {
+        return false;
+      } else if (alertInProgress) {
+        return true;
+      }
+
+      messageBody = await this.formMessage(alertInRegion);
+    }
+
+    await this.twilioService.notify(phoneNumber, messageBody);
+
+    return true;
+  }
+
   public async notifyByUser(user: UserRecord): Promise<void> {
     const alerts = await this.retrieve();
-    /*const region = user.default_location_for_alerts_in_ua_notifications
-      ? user.default_region
-      : user.current_region;*/
-    const region = user.default_region;
+    const region = user.default_region ?? user.current_region;
 
     let messageBody: string;
 

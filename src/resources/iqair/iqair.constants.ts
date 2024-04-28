@@ -143,6 +143,24 @@ export const AirQualityDescriptions: MetricValueDescription[] = [
   },
 ];
 
+export const WeatherValues: {
+  [key: number]: string;
+} = {
+  1: '01d',
+  2: '01n',
+  3: '02d',
+  4: '02n',
+  5: '03d',
+  6: '04d',
+  7: '04n',
+  8: '09d',
+  9: '10d',
+  10: '10n',
+  11: '11d',
+  12: '13d',
+  13: 'Mist',
+};
+
 export const WeatherTypes: {
   [key: string]: string;
 } = {

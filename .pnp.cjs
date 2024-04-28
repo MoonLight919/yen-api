@@ -47,6 +47,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@nestjs/core", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:10.2.7"],\
             ["@nestjs/cqrs", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:10.1.0"],\
             ["@nestjs/platform-fastify", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:10.2.7"],\
+            ["@nestjs/schedule", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:4.0.2"],\
             ["@nestjs/swagger", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:7.1.14"],\
             ["@nestjs/terminus", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:10.1.1"],\
             ["@nestjs/testing", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:10.2.7"],\
@@ -2996,6 +2997,34 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@nestjs/schedule", [\
+        ["npm:4.0.2", {\
+          "packageLocation": "./.yarn/cache/@nestjs-schedule-npm-4.0.2-fd1cc3e4c4-8910e30c85.zip/node_modules/@nestjs/schedule/",\
+          "packageDependencies": [\
+            ["@nestjs/schedule", "npm:4.0.2"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:4.0.2", {\
+          "packageLocation": "./.yarn/__virtual__/@nestjs-schedule-virtual-41084064dc/0/cache/@nestjs-schedule-npm-4.0.2-fd1cc3e4c4-8910e30c85.zip/node_modules/@nestjs/schedule/",\
+          "packageDependencies": [\
+            ["@nestjs/schedule", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:4.0.2"],\
+            ["@nestjs/common", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:10.2.7"],\
+            ["@nestjs/core", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:10.2.7"],\
+            ["@types/nestjs__common", null],\
+            ["@types/nestjs__core", null],\
+            ["cron", "npm:3.1.7"],\
+            ["uuid", "npm:9.0.1"]\
+          ],\
+          "packagePeers": [\
+            "@nestjs/common",\
+            "@nestjs/core",\
+            "@types/nestjs__common",\
+            "@types/nestjs__core"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@nestjs/schematics", [\
         ["npm:10.0.3", {\
           "packageLocation": "./.yarn/cache/@nestjs-schematics-npm-10.0.3-de0e16472c-da07bd9123.zip/node_modules/@nestjs/schematics/",\
@@ -4851,6 +4880,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-luxon-npm-3.3.3-64838dc4b1-072dd39eea.zip/node_modules/@types/luxon/",\
           "packageDependencies": [\
             ["@types/luxon", "npm:3.3.3"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:3.4.2", {\
+          "packageLocation": "./.yarn/cache/@types-luxon-npm-3.4.2-092583f006-6f92d5bd02.zip/node_modules/@types/luxon/",\
+          "packageDependencies": [\
+            ["@types/luxon", "npm:3.4.2"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -7216,6 +7252,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "@types/typescript",\
             "cosmiconfig",\
             "typescript"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["cron", [\
+        ["npm:3.1.7", {\
+          "packageLocation": "./.yarn/cache/cron-npm-3.1.7-e31150a197-d98ee52975.zip/node_modules/cron/",\
+          "packageDependencies": [\
+            ["cron", "npm:3.1.7"],\
+            ["@types/luxon", "npm:3.4.2"],\
+            ["luxon", "npm:3.4.4"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -11350,6 +11397,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/luxon-npm-3.4.3-1b54517fa6-3eade81506.zip/node_modules/luxon/",\
           "packageDependencies": [\
             ["luxon", "npm:3.4.3"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:3.4.4", {\
+          "packageLocation": "./.yarn/cache/luxon-npm-3.4.4-c93f95dde8-36c1f99c47.zip/node_modules/luxon/",\
+          "packageDependencies": [\
+            ["luxon", "npm:3.4.4"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -16950,6 +17004,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@nestjs/core", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:10.2.7"],\
             ["@nestjs/cqrs", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:10.1.0"],\
             ["@nestjs/platform-fastify", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:10.2.7"],\
+            ["@nestjs/schedule", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:4.0.2"],\
             ["@nestjs/swagger", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:7.1.14"],\
             ["@nestjs/terminus", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:10.1.1"],\
             ["@nestjs/testing", "virtual:1c16421a2e5353f09d14b75d49b290f4fe9653e151009a8ab096d59aab3b6b0d3f3141e6f53d53c1680755d83ad8213ca7124f6f8206635916cf84370b2a4d77#npm:10.2.7"],\
